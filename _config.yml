@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 我的个人IP站
-subtitle: '独立站 | 网盘资源 | 商单合作'
-description: '个人IP杂货铺，分享我的想法、资源和项目'
-keywords: 独立站,网盘拉新,个人IP,博客
-author: Your Name
+title: Je suis pas DaVinci
+subtitle: 'AI创作者 | 润学研究员 | 认知劫持专家'
+description: '达芬七的个人站：深度思考、AI工具、搞钱副业、加拿大生活'
+keywords: AI,Claude,润学,加拿大,副业,认知,创作
+author: 达芬七 DaVinCi
 language: zh-CN
-timezone: 'Asia/Shanghai'
+timezone: 'America/Toronto'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://suispasdavinci.com
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
