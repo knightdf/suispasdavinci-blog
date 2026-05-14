@@ -28,22 +28,7 @@ type: page
 
 ---
 
-## 我用什么工具
-
-- **Claude Opus 4.6** — 内容创作、代码开发、认知实验
-- **Grok** — 事实核查、数据验证
-- **Midjourney** — 视觉创作
-- **DaVinCi_AI** — 我的 AI 第二大脑系统（1026 个文件，三层记忆架构）
-- **blog-sync** — 自动化内容同步工具
-
----
-
 ## 联系我
 
-- **X (Twitter)**: [@你的X账号]
+- **X (Twitter)**: [@SuisPasDaVinci](https://x.com/SuisPasDaVinci)
 - **Email**: [你的邮箱]
-- **GitHub**: [你的GitHub]
-
----
-
-*这个站用 Hexo 生成，托管在 Cloudflare Pages，所有内容由 AI 辅助创作但保持人类视角。*
