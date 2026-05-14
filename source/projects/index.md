@@ -1,13 +1,34 @@
 ---
-title: 项目展示
+title: 推荐工具
 date: 2026-04-19 11:41:39
-layout: links
-links:
-  - class_name: 变现项目
-    class_desc: 实战验证的副业赚钱路径
-    link_list:
-      - name: 网盘拉新全流程
-        link: /2026/04/19/netdisk-referral-guide/
-        avatar: https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400
-        descr: 从0到1的网盘推广实操手册，包含话术、渠道、变现全流程
+type: page
 ---
+
+# 推荐工具
+
+这里放本站长期维护、反复测试过的工具入口。  
+原则很简单：能解决具体问题，能减少试错成本，能长期更新。
+
+## 出海支付
+
+### ChatGPT/Claude 虚拟卡指南
+
+大陆用户订阅 ChatGPT、Claude、Midjourney、Netflix、Apple 等海外服务，经常会遇到国内银行卡支付失败、风控、订阅被拒的问题。
+
+这篇指南整理了虚拟卡注册、币安买 USDT、C2C 交易、充值和开卡的完整流程：
+
+[查看虚拟卡完整指南](/2026/05/12/2026-05-12-virtual-card-chatgpt-claude-guide/)
+
+适合：
+
+- 第一次订阅 ChatGPT / Claude 的大陆用户
+- 没有海外信用卡的人
+- 想用虚拟卡管理海外订阅的人
+- 想小额测试 USDT 充值流程的人
+
+## 后续会补充
+
+- 海外 AI 服务订阅工具
+- 加拿大生活常用工具
+- 移民资料查询入口
+- 出海支付和账号风控避坑

@@ -1,0 +1,51 @@
+body {
+  background: #f4f6f8;
+}
+
+.navbar {
+  box-shadow: 0 1px 0 rgba(17, 24, 39, 0.08);
+}
+
+.navbar .navbar-brand,
+.navbar .navbar-nav .nav-link {
+  letter-spacing: 0;
+}
+
+.index-header .slogan .subtitle {
+  max-width: 920px;
+  margin: 0 auto;
+  line-height: 1.55;
+  font-weight: 500;
+}
+
+.index-header .banner-text .title {
+  letter-spacing: 0;
+}
+
+.post-list .post {
+  border-radius: 6px;
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.post-list .post-title {
+  letter-spacing: 0;
+}
+
+.markdown-body img {
+  border-radius: 6px;
+  border: 1px solid rgba(17, 24, 39, 0.12);
+}
+
+.markdown-body h2 {
+  border-bottom: 1px solid rgba(17, 24, 39, 0.12);
+  padding-bottom: 0.35em;
+}
+
+.markdown-body a {
+  font-weight: 600;
+}
+
+.link-card {
+  border-radius: 6px !important;
+}
