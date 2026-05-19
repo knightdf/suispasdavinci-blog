@@ -6,29 +6,47 @@ type: page
 
 # 推荐工具
 
-这里放本站长期维护、反复测试过的工具入口。  
-原则很简单：能解决具体问题，能减少试错成本，能长期更新。
+这里不是工具大全。
 
-## 出海支付
+我只放自己长期会用、会查、会拿来回答朋友问题的东西。原则很简单：能解决具体问题，能减少试错成本，能长期更新。
 
-### ChatGPT/Claude 虚拟卡指南
+<section class="tool-home compact">
+  <div class="tool-section-head">
+    <p>出海支付</p>
+    <h2>虚拟卡与企业支付</h2>
+  </div>
 
-大陆用户订阅 ChatGPT、Claude、Midjourney、Netflix、Apple 等海外服务，经常会遇到国内银行卡支付失败、风控、订阅被拒的问题。
+  <div class="tool-grid">
+    <a class="tool-card primary" href="/2026/05/12/2026-05-12-virtual-card-chatgpt-claude-guide/">
+      <span>置顶</span>
+      <h3>虚拟卡不是灰产工具，是企业支付的防火墙</h3>
+      <p>给广告投放、SaaS 订阅、跨境团队和独立开发者的合规使用指南。</p>
+    </a>
 
-这篇指南整理了虚拟卡注册、币安买 USDT、C2C 交易、充值和开卡的完整流程：
+    <a class="tool-card" href="/tags/虚拟卡/">
+      <span>专题</span>
+      <h3>虚拟卡相关全部文章</h3>
+      <p>安全、充值、订阅失败、退款、卡段和常见支付问题。</p>
+    </a>
+  </div>
 
-[查看虚拟卡完整指南](/2026/05/12/2026-05-12-virtual-card-chatgpt-claude-guide/)
+  <div class="tool-section-head">
+    <p>下一批会补</p>
+    <h2>我准备继续整理的入口</h2>
+  </div>
 
-适合：
-
-- 第一次订阅 ChatGPT / Claude 的大陆用户
-- 没有海外信用卡的人
-- 想用虚拟卡管理海外订阅的人
-- 想小额测试 USDT 充值流程的人
-
-## 后续会补充
-
-- 海外 AI 服务订阅工具
-- 加拿大生活常用工具
-- 移民资料查询入口
-- 出海支付和账号风控避坑
+  <div class="rule-list">
+    <div>
+      <strong>海外 AI 服务订阅</strong>
+      <p>ChatGPT、Claude、Midjourney、OpenAI API，哪些地方会卡，怎么排查。</p>
+    </div>
+    <div>
+      <strong>USDT 充值避坑</strong>
+      <p>买币、链选择、小额测试、不到账排查。这个环节最容易因为手滑丢钱。</p>
+    </div>
+    <div>
+      <strong>加拿大生活工具</strong>
+      <p>租房、交通、医疗、政府入口、税务和移民资料查询，不做花架子。</p>
+    </div>
+  </div>
+</section>

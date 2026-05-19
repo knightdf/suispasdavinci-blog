@@ -1,6 +1,6 @@
-title: 出海工具与加拿大生活指南
-subtitle: 加拿大生活 | 出海工具 | 移民观察
-description: 面向大陆用户的海外服务订阅、虚拟卡支付、出海工具、加拿大生活和移民实操指南。
+title: 达芬七的海外工具箱
+subtitle: 一个在加拿大生活的人，整理给国内朋友的出海工具和避坑指南
+description: 真实海外生活里的工具推荐、虚拟卡支付、AI 服务订阅、加拿大生活和移民实操指南。
 keywords: 虚拟卡,ChatGPT订阅,Claude订阅,海外服务订阅,出海工具,加拿大生活,加拿大移民,币安充值,USDT
 author: 达芬七 DaVinCi
 language: zh-CN
@@ -43,7 +43,7 @@ prismjs:
   line_number: true
   tab_replace: ''
 index_generator:
-  path: ''
+  path: blog
   per_page: 10
   order_by: '-date'
 default_category: uncategorized
