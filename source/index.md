@@ -37,19 +37,16 @@ banner_mask_alpha: 0.72
       <h3>虚拟卡不是灰产工具，是企业支付的防火墙</h3>
       <p>适合广告投放、SaaS 订阅、跨境团队和独立开发者。重点讲合规边界、预算控制和风险隔离。</p>
     </a>
-
     <a class="tool-card" href="/tags/虚拟卡/">
       <span>虚拟卡支付</span>
       <h3>订阅海外服务，先把支付搞清楚</h3>
       <p>虚拟卡安全、充值、退款、卡段、失败原因和常见坑，集中放在这里。</p>
     </a>
-
     <a class="tool-card" href="/categories/出海工具/">
       <span>出海工具</span>
       <h3>AI 工具、SaaS、云服务和账号支付</h3>
       <p>ChatGPT、Claude、Midjourney、云服务、开发工具，能用什么、哪里容易卡。</p>
     </a>
-
     <a class="tool-card" href="/tags/加拿大/">
       <span>加拿大生活</span>
       <h3>别只看移民广告，先看日常成本</h3>
