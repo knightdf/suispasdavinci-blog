@@ -46,6 +46,44 @@ banner_img_height: 0
     </div>
   </section>
 
+  <section class="home-section">
+    <div class="section-title">
+      <p>精选长文</p>
+      <h2>先看这几篇</h2>
+    </div>
+    <div class="article-grid">
+      <a class="article-card large" href="/2026/04/02/canada-10-years-three-endings/">
+        <img src="https://pbs.twimg.com/media/HFouQAuWsAAkNYn.jpg" alt="加拿大10年，我见过最真实的三种移民结局封面" />
+        <div>
+          <span>移民判断</span>
+          <h3>加拿大10年，我见过最真实的三种移民结局</h3>
+          <p>不是劝润，也不是劝留。先看看不同人重启后的真实走向。</p>
+        </div>
+      </a>
+      <a class="article-card" href="/2026/04/11/2026-04-11-francophone-mobility-c16-work-permit/">
+        <img src="https://pbs.twimg.com/media/HFrYCojboAAeQJv.jpg" alt="C16法语工签封面" />
+        <div>
+          <span>移民实战</span>
+          <h3>PGWP只剩6个月？C16法语工签可能多给你2年缓冲</h3>
+        </div>
+      </a>
+      <a class="article-card" href="/2026/04/06/2026-04-06-AI时代下的加拿大没有新国运了/">
+        <img src="https://pbs.twimg.com/media/HFW9nyUW8AAy0Yt.jpg" alt="AI时代下的加拿大封面" />
+        <div>
+          <span>加拿大观察</span>
+          <h3>AI时代下的加拿大：没有新国运了</h3>
+        </div>
+      </a>
+      <a class="article-card" href="/2026/05/12/2026-05-12-virtual-card-chatgpt-claude-guide/">
+        <img src="/img/virtual-card-guide/10-virtual-card-step.jpg" alt="海外AI服务订阅与虚拟卡封面" />
+        <div>
+          <span>出海工具</span>
+          <h3>海外AI服务订阅与虚拟卡</h3>
+        </div>
+      </a>
+    </div>
+  </section>
+
   <section class="home-section two-col">
     <div>
       <div class="section-title">
