@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 360" role="img" aria-labelledby="title desc">
+  <title id="title">达芬七 VCard placeholder banner</title>
+  <desc id="desc">A clean placeholder banner for DaFenQi vCard link.</desc>
+  <rect width="1600" height="360" rx="28" fill="#172026"/>
+  <rect x="28" y="28" width="1544" height="304" rx="20" fill="#f6f6f1"/>
+  <circle cx="1350" cy="180" r="86" fill="#172026"/>
+  <text x="132" y="142" fill="#6b766e" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="34" font-weight="800">达芬七 · VCard</text>
+  <text x="132" y="222" fill="#172026" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="68" font-weight="900">加拿大十年，海外生活与工具实验</text>
+  <text x="132" y="280" fill="#52606a" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="30" font-weight="600">移民幻觉 / 出海工具 / 普通人的人生重启判断</text>
+  <text x="1350" y="196" text-anchor="middle" fill="#ffffff" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="54" font-weight="900">七</text>
+</svg>

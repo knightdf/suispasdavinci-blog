@@ -42,7 +42,7 @@ code:
   # 代码语言
   # Code language
   language:
-    enable: true
+    enable: false
     default: "TEXT"
 
   # 代码高亮
@@ -128,7 +128,7 @@ fun_features:
 # 主题暗色模式，开启后菜单中会出现切换按钮，用户浏览器会存储切换选项，并且会遵循 prefers-color-scheme 自动切换
 # Theme dark mode. If enable, a switch button will appear on the menu, each of the visitor's browser will store his switch option
 dark_mode:
-  enable: true
+  enable: false
   # 默认的选项（当用户手动切换后则不再按照默认模式），选择 `auto` 会优先遵循 prefers-color-scheme，其次按用户本地时间 18 点到次日 6 点之间进入暗色模式
   # Default option (when the visitor switches manually, the default mode is no longer followed), choosing `auto` will give priority to prefers-color-scheme, and then enter the dark mode from 18:00 to 6:00 in the visitor's local time
   # Options: auto | light | dark
@@ -238,6 +238,7 @@ custom_js:
 # 指定自定义 .css 文件路径，用法和 custom_js 相同
 # The usage is the same as custom_js
 custom_css:
+  - /css/seo-site.css
 
 # 网页访问统计
 # Analysis of website visitors
@@ -381,17 +382,17 @@ navbar:
   # 导航栏菜单，可自行增减，key 用来关联 languages/*.yml，如不存在关联则显示 key 本身的值；icon 是 css class，可以省略；增加 name 可以强制显示指定名称
   # Navigation bar menu. `key` is used to associate languages/*.yml. If there is no association, the value of `key` itself will be displayed; if `icon` is a css class, it can be omitted; adding `name` can force the display of the specified name
   menu:
-    - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
-    - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" }
-    - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
-    - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
-    - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
+    - { key: "home", name: "首页", link: "/", icon: "iconfont icon-home-fill" }
+    - { key: "blog", name: "文章", link: "/blog/", icon: "iconfont icon-books" }
+    - { key: "tools", name: "工具", link: "/tools/run-worth/", icon: "iconfont icon-th-large" }
+    - { key: "about", name: "关于", link: "/about/", icon: "iconfont icon-user-fill" }
+    - { key: "x", name: "关注 X", link: "https://x.com/intent/follow?screen_name=SuisPasDaVinci", icon: "iconfont icon-twitter-fill" }
     #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
 
 # 搜索功能，基于 hexo-generator-search 插件，若已安装其他搜索插件请关闭此功能，以避免生成多余的索引文件
 # Search feature, based on hexo-generator-search. If you have installed other search plugins, please disable this feature to avoid generating redundant index files
 search:
-  enable: true
+  enable: false
 
   # 搜索索引文件的路径，可以是相对路径或外站的绝对路径
   # Path for search index file, it can be a relative path or an absolute path
@@ -500,17 +501,17 @@ footer:
 index:
   # 首页 Banner 头图，可以是相对路径或绝对路径，以下相同
   # Path of Banner image, can be a relative path or an absolute path, the same on other pages
-  banner_img: https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1920
+  banner_img:
 
   # 头图高度，屏幕百分比
   # Height ratio of banner image
   # Available: 0 - 100
-  banner_img_height: 100
+  banner_img_height: 0
 
   # 头图黑色蒙版的不透明度，available: 0 - 1.0，1 是完全不透明
   # Opacity of the banner mask, 1.0 is completely opaque
   # Available: 0 - 1.0
-  banner_mask_alpha: 0.3
+  banner_mask_alpha: 0
 
   # 首页副标题的独立设置
   # Independent config of home page subtitle
@@ -520,10 +521,7 @@ index:
     # 为空则按 hexo config.subtitle 显示，支持列表格式来实现随机选择一行文字显示
     # If empty, text based on `subtitle` in hexo config, support list format to random selection of a row for display
     text:
-      - "Stanley社群主理人 | 加拿大🇨🇦10年老移民"
-      - "出摊学坚定践行者 | 顶级游戏公司从业者"
-      - "土木成功靠Excel转码 | Vibe Coding"
-      - "AI创作者 | 润学研究员 | 认知劫持专家"
+      - "加拿大十年，把润学、出海和海外生活拆成工具和判断。"
 
     # 通过 API 接口作为首页副标题的内容，必须返回的是 JSON 格式，如果请求失败则按 text 字段显示，该功能必须先开启 typing 打字机功能
     # Subtitle of the homepage through the API, must be returned a JSON. If the request fails, it will be displayed in `text` value. This feature must first enable the typing animation
