@@ -1,4 +1,12 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
 body {
+  overflow-x: hidden;
   background: #f6f6f1;
   color: #172026;
 }
@@ -1249,6 +1257,31 @@ main {
 }
 
 @media (max-width: 900px) {
+  main {
+    padding-top: 12px;
+  }
+
+  #board {
+    padding-right: max(18px, env(safe-area-inset-right)) !important;
+    padding-left: max(18px, env(safe-area-inset-left)) !important;
+  }
+
+  #board > .container,
+  #board .col-md-10 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .home-shell,
+  .placeholder-page,
+  .run-worth-page {
+    width: 100%;
+  }
+
+  .top-feature-banner {
+    margin-top: 12px;
+  }
+
   .home-dashboard,
   .article-grid,
   .feature-grid,
@@ -1344,8 +1377,29 @@ main {
 }
 
 @media (max-width: 640px) {
+  main {
+    padding-top: 8px;
+  }
+
+  #board {
+    padding-right: max(16px, env(safe-area-inset-right)) !important;
+    padding-left: max(16px, env(safe-area-inset-left)) !important;
+  }
+
   .home-shell {
     padding-top: 0;
+    padding-bottom: 36px;
+  }
+
+  .intro-panel {
+    padding: 24px 22px;
+  }
+
+  .dash-card,
+  .feature-card,
+  .about-card,
+  .run-tool {
+    padding: 20px;
   }
 
   .card-shelf {
