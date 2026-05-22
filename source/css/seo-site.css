@@ -857,9 +857,10 @@ main {
 }
 
 .run-brand-row img {
-  width: min(260px, 36vw);
-  max-height: 54px;
+  width: min(170px, 30vw);
+  max-height: 38px;
   object-fit: contain;
+  opacity: 0.45;
   border: 0;
   border-radius: 0;
 }
@@ -886,10 +887,11 @@ main {
 }
 
 .run-report-head img {
-  width: 180px;
-  max-width: 28%;
-  max-height: 54px;
+  width: 120px;
+  max-width: 22%;
+  max-height: 36px;
   object-fit: contain;
+  opacity: 0.34;
   border: 0;
   border-radius: 0;
 }
@@ -1020,15 +1022,24 @@ main {
 }
 
 .run-qr-card {
-  flex: 0 0 112px;
+  flex: 0 0 76px;
   text-align: center;
 }
 
-.run-qr-card img,
+.run-qr-card img {
+  display: block;
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  background: #fff;
+  border: 0;
+  border-radius: 8px;
+}
+
 .run-follow-strip img {
   display: block;
-  width: 112px;
-  height: 112px;
+  width: 88px;
+  height: 88px;
   object-fit: contain;
   background: #fff;
   border: 0;
@@ -1036,8 +1047,9 @@ main {
 }
 
 .run-qr-card span {
-  margin-top: 8px;
-  font-size: 0.82rem;
+  margin-top: 6px;
+  color: #8b8479;
+  font-size: 0.72rem;
 }
 
 .run-result-actions {
@@ -1046,7 +1058,7 @@ main {
 
 .run-follow-strip {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 132px;
+  grid-template-columns: minmax(0, 1fr) 96px;
   gap: 24px;
   align-items: center;
   margin-top: 44px;

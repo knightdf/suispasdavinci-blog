@@ -389,7 +389,10 @@ banner_img_height: 0
     ctx.fillStyle = '#e1111d';
     ctx.font = '900 36px Arial, sans-serif';
     ctx.fillText('我的润学体检报告 · 达芬七出品 · Stanly Team', 110, 135);
-    drawImageContain(ctx, teamLogo, 780, 100, 170, 50);
+    ctx.save();
+    ctx.globalAlpha = 0.32;
+    drawImageContain(ctx, teamLogo, 830, 106, 120, 34);
+    ctx.restore();
 
     ctx.fillStyle = '#e1111d';
     roundRect(ctx, 110, 185, 290, 220, 16);
@@ -458,7 +461,7 @@ banner_img_height: 0
     ctx.stroke();
     ctx.setLineDash([]);
 
-    drawImageContain(ctx, followQr, 820, 1195, 110, 110);
+    drawImageContain(ctx, followQr, 842, 1212, 78, 78);
     ctx.fillStyle = '#7b756b';
     ctx.font = '800 28px Arial, sans-serif';
     ctx.fillText('这逼移民移得值不值计算器', 110, 1325);
