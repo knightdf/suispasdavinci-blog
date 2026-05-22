@@ -38,7 +38,7 @@ banner_img_height: 0
         <p>移民幻觉、加拿大生活、英语、AI、出海工具。</p>
       </a>
       <a class="dash-card" href="/about/">
-        <span>VCard</span>
+        <span>关于</span>
         <h2>关于达芬七</h2>
         <p>加拿大十年，写海外生活和人生重启。最近在把润学做成工具。</p>
       </a>
@@ -101,7 +101,7 @@ banner_img_height: 0
       <img src="/img/x-avatar.jpg" alt="达芬七头像" />
       <h2>达芬七</h2>
       <p>加拿大十年。Stanley Team 成员，专写移民幻觉、海外生活、出海工具和普通人的重启决策。</p>
-      <a href="/about/">查看 VCard</a>
+      <a href="/about/">关于达芬七</a>
     </aside>
   </section>
 </section>
