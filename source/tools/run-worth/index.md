@@ -10,6 +10,11 @@ banner_img_height: 0
 
 {% raw %}
 <section class="run-worth-page" data-run-worth>
+  <div class="run-brand-row">
+    <span>达芬七 · Stanly Team</span>
+    <img src="/img/stanly-team.png" alt="Stanly Team Logo" />
+  </div>
+
   <div class="run-hero">
     <div>
       <p class="eyebrow">润前体检系列 001</p>
@@ -21,7 +26,7 @@ banner_img_height: 0
       </div>
     </div>
     <aside class="run-sample-card" aria-label="示例结果卡片">
-      <span>达芬七出品 · @SuisPasDaVinci</span>
+      <span>达芬七出品 · Stanly Team</span>
       <strong>68</strong>
       <b>半只脚在门口</b>
       <em>另一只脚被现实拽住</em>
@@ -44,21 +49,42 @@ banner_img_height: 0
 
     <section class="run-result" data-result hidden>
       <div class="run-result-card" data-result-card>
+        <div class="run-report-head">
+          <span>我的润学体检报告 · 达芬七出品 · Stanly Team</span>
+          <img src="/img/stanly-team.png" alt="Stanly Team Logo" data-team-logo />
+        </div>
         <div class="run-result-main">
-          <span>你的润值分数</span>
-          <strong data-total-score>0</strong>
-          <h2 data-result-title>半只脚在门口</h2>
-          <p data-result-judge>另一只脚被现实拽住。</p>
-          <div class="run-result-actions">
-            <button type="button" class="btn primary" data-copy>复制结果文案</button>
-            <button type="button" class="btn quiet" data-save>保存结果图</button>
+          <div class="run-score-box">
+            <strong data-total-score>0</strong>
+          </div>
+          <div>
+            <h2 data-result-title>半只脚在门口</h2>
+            <p data-result-judge>另一只脚被现实拽住。</p>
           </div>
         </div>
-        <div class="run-radar-wrap">
-          <canvas width="320" height="320" data-radar></canvas>
+        <div class="run-radar-frame">
+          <div class="run-radar-wrap">
+            <canvas width="760" height="360" data-radar></canvas>
+          </div>
+        </div>
+        <div class="run-breakdown" data-breakdown></div>
+        <p class="run-weak-copy" data-weak-copy></p>
+        <div class="run-report-footer">
+          <div>
+            <strong>这逼移民移得值不值计算器</strong>
+            <span>达芬七 @SuisPasDaVinci</span>
+            <span>Stanly Team · v0.3 · 2026-05-22</span>
+          </div>
+          <div class="run-qr-card">
+            <img src="/img/x-follow-qr.png" alt="关注达芬七 X 二维码" data-follow-qr />
+            <span>扫码关注 X</span>
+          </div>
+        </div>
+        <div class="run-result-actions">
+          <button type="button" class="btn primary" data-copy>复制结果文案</button>
+          <button type="button" class="btn quiet" data-save>保存结果图</button>
         </div>
       </div>
-      <div class="run-breakdown" data-breakdown></div>
       <p class="run-note">这不是移民资格评估，也不是人生判决书。它只是把一件容易情绪化的事，拆成几笔更容易看清的账。</p>
     </section>
   </div>
@@ -76,6 +102,15 @@ banner_img_height: 0
       <div><strong>未来</strong><p>你是在买选择权，还是只是在逃离眼前的不爽。</p></div>
     </div>
   </section>
+
+  <section class="run-follow-strip">
+    <div>
+      <p class="eyebrow">继续看</p>
+      <h2>达芬七 · Stanly Team</h2>
+      <p>后面还会继续做润前体检、出海工具、海外生活决策这类小产品。</p>
+    </div>
+    <img src="/img/x-follow-qr.png" alt="关注达芬七 X 二维码" />
+  </section>
 </section>
 
 <script>
@@ -86,7 +121,7 @@ banner_img_height: 0
   const dimensions = [
     {
       key: 'money',
-      name: '钱',
+      name: '经济',
       title: '先算钱：你有没有回血能力？',
       questions: [
         {
@@ -222,6 +257,7 @@ banner_img_height: 0
   const titleEl = root.querySelector('[data-result-title]');
   const judgeEl = root.querySelector('[data-result-judge]');
   const breakdownEl = root.querySelector('[data-breakdown]');
+  const weakCopyEl = root.querySelector('[data-weak-copy]');
   const radar = root.querySelector('[data-radar]');
 
   function renderStep() {
@@ -267,91 +303,176 @@ banner_img_height: 0
 
   function drawRadar(scores) {
     const ctx = radar.getContext('2d');
-    const size = radar.width;
-    const center = size / 2;
-    const radius = 112;
+    ctx.clearRect(0, 0, radar.width, radar.height);
+    drawRadarChart(ctx, scores, 0, 0, radar.width, radar.height, {
+      labelColor: '#e1111d',
+      gridColor: 'rgba(232, 220, 196, 0.7)',
+      axisColor: 'rgba(232, 220, 196, 0.45)',
+      fillColor: 'rgba(225, 17, 29, 0.72)',
+      strokeColor: '#e1111d',
+      fontSize: 18
+    });
+  }
+
+  function drawRadarChart(ctx, scores, x, y, width, height, options) {
     const count = scores.length;
-    ctx.clearRect(0, 0, size, size);
-    ctx.lineWidth = 1;
-    ctx.strokeStyle = 'rgba(23, 32, 38, 0.14)';
-    ctx.fillStyle = '#6b766e';
-    ctx.font = '700 15px Arial, sans-serif';
+    const centerX = x + width / 2;
+    const centerY = y + height / 2 + 6;
+    const radius = Math.min(width, height) * 0.31;
+    ctx.save();
+    ctx.lineWidth = 2;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
+    ctx.font = '800 ' + (options.fontSize || 18) + 'px Arial, sans-serif';
 
     for (let ring = 1; ring <= 4; ring += 1) {
       ctx.beginPath();
       for (let i = 0; i < count; i += 1) {
         const angle = -Math.PI / 2 + i * Math.PI * 2 / count;
         const r = radius * ring / 4;
-        const x = center + Math.cos(angle) * r;
-        const y = center + Math.sin(angle) * r;
-        if (i === 0) ctx.moveTo(x, y);
-        else ctx.lineTo(x, y);
+        const px = centerX + Math.cos(angle) * r;
+        const py = centerY + Math.sin(angle) * r;
+        if (i === 0) ctx.moveTo(px, py);
+        else ctx.lineTo(px, py);
       }
       ctx.closePath();
+      ctx.strokeStyle = options.gridColor;
       ctx.stroke();
     }
 
     scores.forEach(function (item, i) {
       const angle = -Math.PI / 2 + i * Math.PI * 2 / count;
       ctx.beginPath();
-      ctx.moveTo(center, center);
-      ctx.lineTo(center + Math.cos(angle) * radius, center + Math.sin(angle) * radius);
+      ctx.moveTo(centerX, centerY);
+      ctx.lineTo(centerX + Math.cos(angle) * radius, centerY + Math.sin(angle) * radius);
+      ctx.strokeStyle = options.axisColor;
       ctx.stroke();
-      ctx.fillText(item.name, center + Math.cos(angle) * (radius + 34), center + Math.sin(angle) * (radius + 28));
+      ctx.fillStyle = options.labelColor;
+      ctx.fillText(item.name + '账', centerX + Math.cos(angle) * (radius + 48), centerY + Math.sin(angle) * (radius + 34));
     });
 
     ctx.beginPath();
     scores.forEach(function (item, i) {
       const angle = -Math.PI / 2 + i * Math.PI * 2 / count;
       const r = radius * item.score / 20;
-      const x = center + Math.cos(angle) * r;
-      const y = center + Math.sin(angle) * r;
-      if (i === 0) ctx.moveTo(x, y);
-      else ctx.lineTo(x, y);
+      const px = centerX + Math.cos(angle) * r;
+      const py = centerY + Math.sin(angle) * r;
+      if (i === 0) ctx.moveTo(px, py);
+      else ctx.lineTo(px, py);
     });
     ctx.closePath();
-    ctx.fillStyle = 'rgba(225, 17, 29, 0.2)';
-    ctx.strokeStyle = '#e1111d';
-    ctx.lineWidth = 3;
+    ctx.fillStyle = options.fillColor;
+    ctx.strokeStyle = options.strokeColor;
+    ctx.lineWidth = 4;
     ctx.fill();
     ctx.stroke();
+    ctx.restore();
   }
 
-  function renderPoster(total, label, scores) {
+  function renderPoster(total, label, scores, weakest) {
     const canvas = document.createElement('canvas');
     canvas.width = 1080;
-    canvas.height = 1350;
+    canvas.height = 1520;
     const ctx = canvas.getContext('2d');
-    ctx.fillStyle = '#f7f0df';
+    const teamLogo = root.querySelector('[data-team-logo]');
+    const followQr = root.querySelector('[data-follow-qr]');
+
+    ctx.fillStyle = '#f8efd8';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = '#111820';
-    ctx.font = '700 34px Arial, sans-serif';
-    ctx.fillText('达芬七出品 · @SuisPasDaVinci', 90, 100);
-    ctx.font = '900 104px Arial, sans-serif';
-    wrapText(ctx, '这逼移民移得值不值？', 90, 235, 900, 120);
-    ctx.fillStyle = '#e1111d';
-    roundRect(ctx, 90, 515, 900, 260, 14);
+    ctx.fillStyle = '#fffdf6';
+    roundRect(ctx, 70, 70, 940, 1380, 26);
     ctx.fill();
+    ctx.strokeStyle = '#111820';
+    ctx.lineWidth = 8;
+    ctx.stroke();
+
+    ctx.fillStyle = '#e1111d';
+    ctx.font = '900 36px Arial, sans-serif';
+    ctx.fillText('我的润学体检报告 · 达芬七出品 · Stanly Team', 110, 135);
+    drawImageContain(ctx, teamLogo, 780, 100, 170, 50);
+
+    ctx.fillStyle = '#e1111d';
+    roundRect(ctx, 110, 185, 290, 220, 16);
+    ctx.fill();
+    ctx.strokeStyle = '#111820';
+    ctx.lineWidth = 6;
+    ctx.stroke();
     ctx.fillStyle = '#fff';
     ctx.textAlign = 'center';
-    ctx.font = '900 168px Arial, sans-serif';
-    ctx.fillText(String(total), 540, 700);
+    ctx.font = '900 126px Arial, sans-serif';
+    ctx.fillText(String(total), 255, 335);
+
     ctx.textAlign = 'left';
     ctx.fillStyle = '#111820';
-    ctx.font = '900 58px Arial, sans-serif';
-    wrapText(ctx, label.title, 90, 880, 900, 70);
-    ctx.font = '700 36px Arial, sans-serif';
-    ctx.fillText(label.judge, 90, 1040);
-    ctx.font = '700 30px Arial, sans-serif';
-    scores.forEach(function (item, index) {
-      ctx.fillText(item.name + '账 ' + item.score + '/20', 90 + (index % 2) * 470, 1140 + Math.floor(index / 2) * 70);
+    ctx.font = '900 62px Arial, sans-serif';
+    wrapText(ctx, label.title, 450, 255, 470, 74);
+    ctx.fillStyle = '#6b675f';
+    ctx.font = '800 34px Arial, sans-serif';
+    wrapText(ctx, label.judge, 450, 375, 470, 46);
+
+    ctx.fillStyle = '#111';
+    roundRect(ctx, 110, 470, 860, 330, 18);
+    ctx.fill();
+    ctx.strokeStyle = '#e7dcc8';
+    ctx.lineWidth = 4;
+    ctx.stroke();
+    drawRadarChart(ctx, scores, 150, 500, 780, 270, {
+      labelColor: '#e1111d',
+      gridColor: 'rgba(232, 220, 196, 0.85)',
+      axisColor: 'rgba(232, 220, 196, 0.46)',
+      fillColor: 'rgba(225, 17, 29, 0.86)',
+      strokeColor: '#e1111d',
+      fontSize: 22
     });
-    ctx.fillStyle = '#6b766e';
-    ctx.font = '700 28px Arial, sans-serif';
-    ctx.fillText('suispasdavinci.com/tools/run-worth/', 90, 1280);
+
+    scores.forEach(function (item, index) {
+      const boxW = 154;
+      const gap = 18;
+      const bx = 110 + index * (boxW + gap);
+      const by = 850;
+      ctx.fillStyle = '#fff';
+      roundRect(ctx, bx, by, boxW, 105, 12);
+      ctx.fill();
+      ctx.strokeStyle = '#e7dcc8';
+      ctx.lineWidth = 4;
+      ctx.stroke();
+      ctx.fillStyle = '#111820';
+      ctx.font = '900 27px Arial, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(item.name + '账', bx + boxW / 2, by + 38);
+      ctx.font = '900 38px Arial, sans-serif';
+      ctx.fillText(item.score + '/20', bx + boxW / 2, by + 82);
+    });
+
+    ctx.textAlign = 'left';
+    ctx.fillStyle = '#6b675f';
+    ctx.font = '900 38px Arial, sans-serif';
+    wrapText(ctx, '你的' + weakest.name + '账最弱。移民不是看你赚过多少钱，是看你换环境以后还能不能持续回血。这一项只有 ' + weakest.score + '/20，是你现在最大的障碍。', 110, 1045, 840, 58);
+
+    ctx.strokeStyle = '#e0d2ba';
+    ctx.lineWidth = 4;
+    ctx.setLineDash([10, 12]);
+    ctx.beginPath();
+    ctx.moveTo(110, 1260);
+    ctx.lineTo(790, 1260);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    drawImageContain(ctx, followQr, 820, 1195, 110, 110);
+    ctx.fillStyle = '#7b756b';
+    ctx.font = '800 28px Arial, sans-serif';
+    ctx.fillText('这逼移民移得值不值计算器', 110, 1325);
+    ctx.fillText('达芬七 @SuisPasDaVinci', 110, 1372);
+    ctx.fillText('Stanly Team · v0.3 · 2026-05-22', 110, 1419);
     return canvas;
+  }
+
+  function drawImageContain(ctx, image, x, y, width, height) {
+    if (!image || !image.complete || !image.naturalWidth) return;
+    const scale = Math.min(width / image.naturalWidth, height / image.naturalHeight);
+    const drawW = image.naturalWidth * scale;
+    const drawH = image.naturalHeight * scale;
+    ctx.drawImage(image, x + (width - drawW) / 2, y + (height - drawH) / 2, drawW, drawH);
   }
 
   function roundRect(ctx, x, y, width, height, radius) {
@@ -388,10 +509,11 @@ banner_img_height: 0
     const weakest = scores.slice().sort(function (a, b) { return a.score - b.score; })[0];
     totalEl.textContent = total;
     titleEl.textContent = label.title;
-    judgeEl.textContent = label.judge + ' 你最弱的是' + weakest.name + '账，先别急着许愿，先把这笔账补上。';
+    judgeEl.textContent = label.judge;
     breakdownEl.innerHTML = scores.map(function (item) {
       return '<div><strong>' + item.name + '账</strong><span>' + item.score + '/20</span><i style="width:' + (item.score * 5) + '%"></i></div>';
     }).join('');
+    weakCopyEl.textContent = '你的' + weakest.name + '账最弱。移民不是看你赚过多少钱，是看你换环境以后还能不能持续回血。这一项只有 ' + weakest.score + '/20，是你现在最大的障碍。';
     drawRadar(scores);
     resultEl.hidden = false;
     resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -403,7 +525,7 @@ banner_img_height: 0
       });
     };
     root.querySelector('[data-save]').onclick = function () {
-      const poster = renderPoster(total, label, scores);
+      const poster = renderPoster(total, label, scores, weakest);
       const link = document.createElement('a');
       link.download = 'run-worth-' + total + '.png';
       link.href = poster.toDataURL('image/png');
