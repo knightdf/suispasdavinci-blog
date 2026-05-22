@@ -8,9 +8,9 @@ banner_img_height: 0
 
 {% raw %}
 <section class="home-shell">
-  <a class="top-feature-banner" href="/about/" aria-label="查看达芬七 VCard">
-    <img src="/img/vcard-banner-placeholder.svg" alt="达芬七 VCard 置顶图" />
-    <span>点击查看 VCard</span>
+  <a class="top-feature-banner" href="https://vcardvirtual.cc/login?invite_code=qfMgYK" target="_blank" rel="noopener noreferrer" aria-label="前往 VCard 首页">
+    <img src="/img/vcard-banner.png" alt="达芬七 VCard 置顶图" />
+    <span>前往 VCard</span>
   </a>
 
   <section class="home-dashboard">
