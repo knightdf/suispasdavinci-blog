@@ -493,6 +493,59 @@ main {
   border-radius: 8px;
 }
 
+.post-vcard-panel {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 20px;
+  align-items: center;
+  margin: 28px 0;
+  padding: 16px;
+  color: #172026;
+  background: #f8f4ff;
+  border: 1px solid rgba(85, 70, 180, 0.18);
+  border-radius: 12px;
+}
+
+.post-vcard-panel.compact {
+  display: block;
+  background: #fbf4df;
+  border-color: rgba(126, 95, 42, 0.22);
+}
+
+.post-vcard-panel img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 0;
+  border-radius: 8px;
+}
+
+.post-vcard-panel strong {
+  display: block;
+  color: #111820;
+  font-size: 1.3rem;
+  line-height: 1.35;
+}
+
+.post-vcard-panel p {
+  margin: 10px 0 14px;
+  color: #52606a;
+  line-height: 1.7;
+}
+
+.post-vcard-panel a,
+.post-vcard-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 14px;
+  color: #fff !important;
+  text-decoration: none !important;
+  background: #172026;
+  border-radius: 7px;
+}
+
 .index-card {
   display: flex;
   align-items: stretch;
@@ -652,6 +705,10 @@ main {
 
   .index-card .index-info {
     padding: 4px 2px 2px;
+  }
+
+  .post-vcard-panel {
+    grid-template-columns: 1fr;
   }
 }
 
