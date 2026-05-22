@@ -15,6 +15,7 @@ tags:
 brand: 教程向
 version: v1.0
 sticky: true
+index_img: https://pbs.twimg.com/media/HFrYCojboAAeQJv.jpg
 ai_disclosure: 本文基于 IRCC 官网 2026 年 4 月最新政策整理，Claude Opus 4.6 参与资料核查与结构编排。
 source_material: IRCC 官网 - Francophone Mobility work permit + Grok 事实核查
 ---

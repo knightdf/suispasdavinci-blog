@@ -7,6 +7,7 @@ tags:
   - 移民
 categories:
   - 润学观察
+index_img: https://pbs.twimg.com/media/HFouQAuWsAAkNYn.jpg
 ---
 
 很多人以为，移民是重新开始。

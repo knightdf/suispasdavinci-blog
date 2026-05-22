@@ -13,6 +13,7 @@ categories:
   - 出海工具
 sticky: 100
 description: 虚拟卡到底怎么合规使用？这篇写给跨境团队、广告投放、独立开发者和经常订阅海外 SaaS 工具的人，重点讲清楚虚拟卡的真正价值：风险隔离、预算控制和企业支付管理。
+index_img: /img/virtual-card-guide/10-virtual-card-step.jpg
 ---
 
 # 虚拟卡不是灰产工具，是企业支付的防火墙
