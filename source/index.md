@@ -10,14 +10,13 @@ banner_img_height: 0
 <section class="home-shell">
   <a class="top-feature-banner" href="https://vcardvirtual.cc/login?invite_code=qfMgYK" target="_blank" rel="noopener noreferrer" aria-label="前往 VCard 首页">
     <img src="/img/vcard-banner.png" alt="达芬七 VCard 置顶图" />
-    <span>前往 VCard</span>
   </a>
 
   <section class="home-dashboard">
     <div class="intro-panel">
-      <p class="eyebrow">达芬七</p>
+      <p class="eyebrow">达芬七 · Stanley Team</p>
       <h1>加拿大十年，把润学和海外生活拆成工具。</h1>
-      <p>文章、清单、小工具，都放这里。少一点玄学，多一点能拿来判断的东西。</p>
+      <p>Stanley Team 重要成员。这里放文章、清单、小工具和海外生活判断，少一点玄学，多一点能拿来做决定的东西。</p>
       <a href="https://x.com/intent/follow?screen_name=SuisPasDaVinci" target="_blank" rel="noopener noreferrer">关注 X @SuisPasDaVinci</a>
     </div>
 
@@ -101,7 +100,7 @@ banner_img_height: 0
     <aside class="about-card">
       <img src="/img/avatar.png" alt="达芬七头像" />
       <h2>达芬七</h2>
-      <p>加拿大十年。专写移民幻觉、海外生活、出海工具和普通人的重启决策。</p>
+      <p>加拿大十年。Stanley Team 重要成员，专写移民幻觉、海外生活、出海工具和普通人的重启决策。</p>
       <a href="/about/">查看 VCard</a>
     </aside>
   </section>
