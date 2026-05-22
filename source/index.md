@@ -59,6 +59,13 @@ banner_img_height: 0
           <p>不是劝润，也不是劝留。先看看不同人重启后的真实走向。</p>
         </div>
       </a>
+      <a class="article-card" href="/2026/05/12/2026-05-12-virtual-card-chatgpt-claude-guide/">
+        <img src="/img/virtual-card-guide/10-virtual-card-step.jpg" alt="海外AI服务订阅与虚拟卡封面" />
+        <div>
+          <span>出海工具</span>
+          <h3>海外AI服务订阅与虚拟卡</h3>
+        </div>
+      </a>
       <a class="article-card" href="/2026/04/11/2026-04-11-francophone-mobility-c16-work-permit/">
         <img src="https://pbs.twimg.com/media/HFrYCojboAAeQJv.jpg" alt="C16法语工签封面" />
         <div>
@@ -71,13 +78,6 @@ banner_img_height: 0
         <div>
           <span>加拿大观察</span>
           <h3>AI时代下的加拿大：没有新国运了</h3>
-        </div>
-      </a>
-      <a class="article-card" href="/2026/05/12/2026-05-12-virtual-card-chatgpt-claude-guide/">
-        <img src="/img/virtual-card-guide/10-virtual-card-step.jpg" alt="海外AI服务订阅与虚拟卡封面" />
-        <div>
-          <span>出海工具</span>
-          <h3>海外AI服务订阅与虚拟卡</h3>
         </div>
       </a>
     </div>
