@@ -387,39 +387,35 @@ banner_img_height: 0
     ctx.stroke();
 
     ctx.fillStyle = '#e1111d';
-    ctx.font = '900 36px Arial, sans-serif';
-    ctx.fillText('我的润学体检报告 · 达芬七出品 · Stanly Team', 110, 135);
-    ctx.save();
-    ctx.globalAlpha = 0.32;
-    drawImageContain(ctx, teamLogo, 830, 106, 120, 34);
-    ctx.restore();
+    ctx.font = '900 32px Arial, sans-serif';
+    ctx.fillText('我的润学体检报告 · 达芬七出品', 110, 135);
 
     ctx.fillStyle = '#e1111d';
-    roundRect(ctx, 110, 185, 290, 220, 16);
+    roundRect(ctx, 110, 180, 250, 180, 16);
     ctx.fill();
     ctx.strokeStyle = '#111820';
     ctx.lineWidth = 6;
     ctx.stroke();
     ctx.fillStyle = '#fff';
     ctx.textAlign = 'center';
-    ctx.font = '900 126px Arial, sans-serif';
-    ctx.fillText(String(total), 255, 335);
+    ctx.font = '900 112px Arial, sans-serif';
+    ctx.fillText(String(total), 235, 305);
 
     ctx.textAlign = 'left';
     ctx.fillStyle = '#111820';
-    ctx.font = '900 62px Arial, sans-serif';
-    wrapText(ctx, label.title, 450, 255, 470, 74);
+    ctx.font = '900 48px Arial, sans-serif';
+    const titleEndY = wrapText(ctx, label.title, 410, 225, 520, 58);
     ctx.fillStyle = '#6b675f';
-    ctx.font = '800 34px Arial, sans-serif';
-    wrapText(ctx, label.judge, 450, 375, 470, 46);
+    ctx.font = '800 30px Arial, sans-serif';
+    wrapText(ctx, label.judge, 410, Math.max(332, titleEndY + 18), 520, 42);
 
     ctx.fillStyle = '#111';
-    roundRect(ctx, 110, 470, 860, 330, 18);
+    roundRect(ctx, 110, 430, 860, 330, 18);
     ctx.fill();
     ctx.strokeStyle = '#e7dcc8';
     ctx.lineWidth = 4;
     ctx.stroke();
-    drawRadarChart(ctx, scores, 150, 500, 780, 270, {
+    drawRadarChart(ctx, scores, 150, 460, 780, 270, {
       labelColor: '#e1111d',
       gridColor: 'rgba(232, 220, 196, 0.85)',
       axisColor: 'rgba(232, 220, 196, 0.46)',
@@ -432,7 +428,7 @@ banner_img_height: 0
       const boxW = 154;
       const gap = 18;
       const bx = 110 + index * (boxW + gap);
-      const by = 850;
+      const by = 805;
       ctx.fillStyle = '#fff';
       roundRect(ctx, bx, by, boxW, 105, 12);
       ctx.fill();
@@ -450,23 +446,28 @@ banner_img_height: 0
     ctx.textAlign = 'left';
     ctx.fillStyle = '#6b675f';
     ctx.font = '900 38px Arial, sans-serif';
-    wrapText(ctx, '你的' + weakest.name + '账最弱。移民不是看你赚过多少钱，是看你换环境以后还能不能持续回血。这一项只有 ' + weakest.score + '/20，是你现在最大的障碍。', 110, 1045, 840, 58);
+    wrapText(ctx, '你的' + weakest.name + '账最弱。移民不是看你赚过多少钱，是看你换环境以后还能不能持续回血。这一项只有 ' + weakest.score + '/20，是你现在最大的障碍。', 110, 1000, 840, 58);
 
     ctx.strokeStyle = '#e0d2ba';
     ctx.lineWidth = 4;
     ctx.setLineDash([10, 12]);
     ctx.beginPath();
     ctx.moveTo(110, 1260);
-    ctx.lineTo(790, 1260);
+    ctx.lineTo(720, 1260);
     ctx.stroke();
     ctx.setLineDash([]);
 
-    drawImageContain(ctx, followQr, 842, 1212, 78, 78);
     ctx.fillStyle = '#7b756b';
     ctx.font = '800 28px Arial, sans-serif';
-    ctx.fillText('这逼移民移得值不值计算器', 110, 1325);
-    ctx.fillText('达芬七 @SuisPasDaVinci', 110, 1372);
-    ctx.fillText('Stanly Team · v0.3 · 2026-05-22', 110, 1419);
+    ctx.fillText('这逼移民移得值不值计算器', 110, 1318);
+    ctx.fillText('达芬七 @SuisPasDaVinci', 110, 1360);
+    ctx.fillText('v0.3 · 2026-05-22', 110, 1402);
+
+    drawImageContain(ctx, followQr, 780, 1228, 118, 118);
+    ctx.save();
+    ctx.globalAlpha = 0.58;
+    drawImageContain(ctx, teamLogo, 735, 1362, 210, 48);
+    ctx.restore();
     return canvas;
   }
 
@@ -501,6 +502,7 @@ banner_img_height: 0
       }
     }
     ctx.fillText(line, x, y);
+    return y;
   }
 
   function showResult() {
