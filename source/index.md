@@ -23,9 +23,9 @@ banner_img_height: 0
     <div class="card-shelf">
       <a class="dash-card primary" href="/tools/run-worth/">
         <span>润前体检 001</span>
-        <h2>新工具占位</h2>
-        <p>一个关于海外生活适配度和人生重启成本的小工具，正式上线前先占个位置。</p>
-        <em>即将上线</em>
+        <h2>润值计算器</h2>
+        <p>测测你适不适合人生重启。钱、时间、环境、关系和未来，哪笔账最拖后腿。</p>
+        <em>开始测试</em>
       </a>
       <a class="dash-card" href="/2026/05/12/2026-05-12-virtual-card-chatgpt-claude-guide/">
         <span>置顶文章</span>
@@ -90,7 +90,7 @@ banner_img_height: 0
         <h2>常用入口</h2>
       </div>
       <div class="link-list">
-        <a href="/tools/run-worth/">新工具占位<span>润前体检系列 001</span></a>
+        <a href="/tools/run-worth/">润值计算器<span>测测你适不适合人生重启</span></a>
         <a href="/categories/移民实战/">移民实战<span>政策、身份、真实路径</span></a>
         <a href="/tags/加拿大/">加拿大生活<span>不是天堂，也不是地狱</span></a>
         <a href="/tags/虚拟卡/">虚拟卡支付<span>海外服务订阅避坑</span></a>
