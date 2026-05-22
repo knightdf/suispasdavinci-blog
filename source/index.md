@@ -98,7 +98,7 @@ banner_img_height: 0
     </div>
 
     <aside class="about-card">
-      <img src="/img/avatar.png" alt="达芬七头像" />
+      <img src="/img/x-avatar.jpg" alt="达芬七头像" />
       <h2>达芬七</h2>
       <p>加拿大十年。Stanley Team 成员，专写移民幻觉、海外生活、出海工具和普通人的重启决策。</p>
       <a href="/about/">查看 VCard</a>
