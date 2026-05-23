@@ -1081,6 +1081,72 @@ main {
   line-height: 1.7;
 }
 
+.return-illusion-page {
+  color: #16181c;
+}
+
+.return-illusion-page .eyebrow,
+.return-illusion-page .run-brand-row {
+  color: #6b5b24;
+}
+
+.return-illusion-page .run-hero h1 {
+  max-width: 820px;
+  letter-spacing: 0;
+}
+
+.return-illusion-page .run-sample-card {
+  color: #fff8e6;
+  background: #16181c;
+  border-color: #16181c;
+  box-shadow: 14px 14px 0 #ffcc33;
+}
+
+.return-illusion-page .run-sample-card span,
+.return-illusion-page .run-sample-card b,
+.return-illusion-page .run-sample-card em {
+  color: #fff8e6;
+}
+
+.return-illusion-page .run-sample-card strong,
+.return-illusion-page .run-progress i,
+.return-illusion-page .run-score-box {
+  color: #16181c;
+  background: #ffcc33;
+}
+
+.return-illusion-page .run-sample-card strong {
+  color: #16181c;
+  border-color: #fff8e6;
+}
+
+.return-illusion-page .run-question input:checked + span {
+  background: #fff3bd;
+  border-color: #ffcc33;
+}
+
+.return-illusion-page .run-result-card {
+  background: #fff8e6;
+}
+
+.return-illusion-page .run-report-head {
+  color: #16181c;
+}
+
+.return-illusion-page .run-radar-wrap {
+  background: #111;
+}
+
+.return-illusion-page .run-breakdown div {
+  border-color: #e5d6b8;
+}
+
+.return-illusion-page .btn.primary {
+  color: #16181c !important;
+  background: #ffcc33;
+  border-color: #16181c;
+}
+
 .markdown-body img {
   border: 1px solid rgba(23, 32, 38, 0.12);
   border-radius: 8px;
