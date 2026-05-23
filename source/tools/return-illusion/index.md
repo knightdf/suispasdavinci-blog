@@ -431,18 +431,18 @@ banner_img_height: 0
     ctx.setLineDash([10, 12]);
     ctx.beginPath();
     ctx.moveTo(110, 1260);
-    ctx.lineTo(720, 1260);
+    ctx.lineTo(620, 1260);
     ctx.stroke();
     ctx.setLineDash([]);
     ctx.fillStyle = '#7b756b';
-    ctx.font = '800 28px Arial, sans-serif';
-    ctx.fillText('回国幻觉浓度测试', 110, 1318);
+    ctx.font = '800 26px Arial, sans-serif';
+    ctx.fillText('回国幻觉浓度测试', 110, 1320);
     ctx.fillText('达芬七 @SuisPasDaVinci', 110, 1360);
-    ctx.fillText('v0.1 · 2026-05-23', 110, 1402);
-    drawImageContain(ctx, followQr, 780, 1228, 118, 118);
+    ctx.fillText('v0.1 · 2026-05-23', 110, 1400);
+    drawImageContain(ctx, followQr, 500, 1278, 118, 118);
     ctx.save();
-    ctx.globalAlpha = 0.58;
-    drawImageContain(ctx, teamLogo, 735, 1362, 210, 48);
+    ctx.globalAlpha = 0.72;
+    drawImageContain(ctx, teamLogo, 700, 1300, 250, 70);
     ctx.restore();
     return canvas;
   }
