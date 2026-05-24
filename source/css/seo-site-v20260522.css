@@ -72,7 +72,7 @@ main {
 
 .container-fluid,
 .container {
-  max-width: 1280px;
+  max-width: 1500px;
 }
 
 .markdown-body {
@@ -95,7 +95,7 @@ main {
 }
 
 .home-shell {
-  max-width: 1240px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 10px 0 42px;
 }
@@ -123,8 +123,8 @@ main {
 
 .home-dashboard {
   display: grid;
-  grid-template-columns: 0.65fr 1.35fr;
-  gap: 18px;
+  grid-template-columns: 0.58fr 1.42fr;
+  gap: 22px;
   align-items: stretch;
   padding-top: 18px;
 }
@@ -207,7 +207,7 @@ main {
 .card-shelf {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+  gap: 18px;
 }
 
 .dash-card {
