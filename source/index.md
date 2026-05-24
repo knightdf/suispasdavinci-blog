@@ -27,12 +27,6 @@ banner_img_height: 0
         <p>测测你适不适合人生重启。钱、时间、环境、关系和未来，哪笔账最拖后腿。</p>
         <em>开始测试</em>
       </a>
-      <a class="dash-card" href="/tools/return-illusion/">
-        <span>润后体检 002</span>
-        <h2>回国幻觉浓度测试</h2>
-        <p>你不是想回国，你是想回到一个不存在的中国。</p>
-        <em>测测幻觉</em>
-      </a>
       <a class="dash-card" href="/2026/05/12/2026-05-12-virtual-card-chatgpt-claude-guide/">
         <span>置顶文章</span>
         <h2>海外 AI 服务订阅与虚拟卡</h2>
@@ -97,7 +91,6 @@ banner_img_height: 0
       </div>
       <div class="link-list">
         <a href="/tools/run-worth/">润值计算器<span>测测你适不适合人生重启</span></a>
-        <a href="/tools/return-illusion/">回国幻觉浓度测试<span>测测你想回的是现实还是滤镜</span></a>
         <a href="/categories/移民实战/">移民实战<span>政策、身份、真实路径</span></a>
         <a href="/tags/加拿大/">加拿大生活<span>不是天堂，也不是地狱</span></a>
         <a href="/tags/虚拟卡/">虚拟卡支付<span>海外服务订阅避坑</span></a>
