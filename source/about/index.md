@@ -28,6 +28,16 @@ type: page
 
 ---
 
+## Stanley Team
+
+我是 Stanley Team 成员。
+
+Stanley Team 是一支全球顶尖的去中心化 AI 研究与应用团队。我们连接技术、学术、产业与内容影响力，把前沿 AI 能力转化为企业真正可用的解决方案。
+
+我在这个站里做的“润值计算器”“回国幻觉浓度测试”和后续的人生计算器系列，也会继续沿着这个方向：把抽象判断拆成可测试、可使用、可传播的小工具。
+
+---
+
 ## 联系我
 
 - **X (Twitter)**: [@SuisPasDaVinci](https://x.com/SuisPasDaVinci)
