@@ -1,13 +1,13 @@
 ---
 title: 加拿大10年，我见过最真实的三种移民结局
 date: 2026-04-02
-tags:
-  - 润学
-  - 加拿大
-  - 移民
-categories:
-  - 润学观察
 index_img: https://pbs.twimg.com/media/HFouQAuWsAAkNYn.jpg
+categories:
+  - 移民实战
+tags:
+  - 加拿大移民
+  - 身份路径
+  - 润学
 ---
 
 很多人以为，移民是重新开始。

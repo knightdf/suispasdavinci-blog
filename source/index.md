@@ -48,36 +48,36 @@ banner_img_height: 0
   <section class="home-section">
     <div class="section-title">
       <p>精选长文</p>
-      <h2>先看这几篇</h2>
+      <h2>按 X 曝光先看这几篇</h2>
     </div>
     <div class="article-grid">
-      <a class="article-card large" href="/2026/04/02/canada-10-years-three-endings/">
-        <img src="https://pbs.twimg.com/media/HFouQAuWsAAkNYn.jpg" alt="加拿大10年，我见过最真实的三种移民结局封面" />
+      <a class="article-card large" href="/2026/04/18/2026-04-18-加拿大报税季-一场3000万人的驯化游戏/">
+        <img src="https://pbs.twimg.com/media/HGNyUkNWgAAZcOX.jpg" alt="加拿大报税季文章封面" />
         <div>
-          <span>移民判断</span>
-          <h3>加拿大10年，我见过最真实的三种移民结局</h3>
-          <p>不是劝润，也不是劝留。先看看不同人重启后的真实走向。</p>
+          <span>加拿大生活 · 294K曝光</span>
+          <h3>加拿大报税季：一场3000万人的驯化游戏</h3>
+          <p>税不是一张表，是普通人在系统里学会服从的过程。</p>
         </div>
       </a>
-      <a class="article-card" href="/2026/05/12/2026-05-12-virtual-card-chatgpt-claude-guide/">
-        <img src="/img/virtual-card-guide/10-virtual-card-step.jpg" alt="海外AI服务订阅与虚拟卡封面" />
+      <a class="article-card" href="/2026/05/10/2026-05-10-1200万流量视频背后的秘密-我只用7个工具找素材/">
+        <img src="https://pbs.twimg.com/media/HH7gVApXwAUOy-P.jpg" alt="1200万流量视频背后的素材工具封面" />
         <div>
-          <span>出海工具</span>
-          <h3>海外AI服务订阅与虚拟卡</h3>
+          <span>AI与工具 · 89K曝光</span>
+          <h3>1200万流量视频背后的秘密：我只用7个工具找素材</h3>
         </div>
       </a>
-      <a class="article-card" href="/2026/04/11/2026-04-11-francophone-mobility-c16-work-permit/">
-        <img src="https://pbs.twimg.com/media/HFrYCojboAAeQJv.jpg" alt="C16法语工签封面" />
+      <a class="article-card" href="/2026/05/01/2026-05-01-五一出国玩才发现-中国人学英语十年-最后练出来的是羞耻感/">
+        <img src="https://pbs.twimg.com/media/HHPYLgnXEAAmRvC.jpg" alt="中国人学英语十年最后练出来的是羞耻感封面" />
         <div>
-          <span>移民实战</span>
-          <h3>PGWP只剩6个月？C16法语工签可能多给你2年缓冲</h3>
+          <span>语言学习 · 45K曝光</span>
+          <h3>中国人学英语十年，最后练出来的是羞耻感</h3>
         </div>
       </a>
-      <a class="article-card" href="/2026/04/06/2026-04-06-AI时代下的加拿大没有新国运了/">
-        <img src="https://pbs.twimg.com/media/HFW9nyUW8AAy0Yt.jpg" alt="AI时代下的加拿大封面" />
+      <a class="article-card" href="/2026/04/20/2026-04-20-加拿大🇨🇦养老天堂-老了才知道是骗局/">
+        <img src="https://pbs.twimg.com/media/HGWeOP3WIAETKU1.jpg" alt="加拿大养老天堂文章封面" />
         <div>
-          <span>加拿大观察</span>
-          <h3>AI时代下的加拿大：没有新国运了</h3>
+          <span>加拿大生活 · 39K曝光</span>
+          <h3>加拿大养老天堂？老了才知道是骗局</h3>
         </div>
       </a>
     </div>
