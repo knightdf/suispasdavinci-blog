@@ -240,6 +240,16 @@ main > .container-fluid > .row > .side-col {
   text-decoration: none !important;
 }
 
+.intro-panel p a,
+.about-card p a,
+.inline-team-link {
+  display: inline;
+  margin: 0;
+  color: inherit !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -507,6 +517,307 @@ main > .container-fluid > .row > .side-col {
 
 .about-card a {
   color: #fff !important;
+}
+
+.blog-hub {
+  max-width: var(--content-width);
+  margin: 0 auto 24px;
+  padding: 26px;
+  background: #fbf4df;
+  border: 1px solid rgba(126, 95, 42, 0.2);
+  border-radius: 12px;
+}
+
+.blog-hub .section-title {
+  margin-bottom: 16px;
+}
+
+.blog-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.blog-hub-grid a {
+  display: block;
+  min-height: 118px;
+  padding: 18px;
+  color: #172026 !important;
+  text-decoration: none !important;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(23, 32, 38, 0.1);
+  border-radius: 9px;
+}
+
+.blog-hub-grid span {
+  display: block;
+  margin-bottom: 10px;
+  color: #6b766e;
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.blog-hub-grid strong {
+  display: block;
+  color: #111820;
+  font-size: 1.1rem;
+  line-height: 1.35;
+}
+
+.about-pro {
+  max-width: var(--site-width);
+  margin: 0 auto;
+  padding: 26px 0 52px;
+}
+
+.about-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.about-hero > div,
+.profile-card,
+.x-profile-card,
+.about-grid a,
+.team-intro {
+  background: #fff;
+  border: 1px solid rgba(23, 32, 38, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 14px 34px rgba(23, 32, 38, 0.06);
+}
+
+.about-hero > div {
+  padding: clamp(28px, 5vw, 54px);
+}
+
+.about-hero h1 {
+  max-width: 920px;
+  margin: 0 0 22px;
+  padding: 0;
+  color: #111820;
+  font-size: clamp(2.4rem, 5vw, 5.4rem);
+  line-height: 1.04;
+  border: 0;
+}
+
+.about-hero p:not(.eyebrow) {
+  max-width: 760px;
+  margin: 0;
+  color: #45515a;
+  font-size: 1.08rem;
+  line-height: 1.85;
+}
+
+.about-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 28px;
+  color: #fff;
+  background: #172026;
+}
+
+.profile-card img {
+  width: 96px;
+  height: 96px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  border: 0;
+  border-radius: 50%;
+}
+
+.profile-card h2 {
+  margin: 0 0 4px;
+  padding: 0;
+  color: #fff;
+  font-size: 2rem;
+  border: 0;
+}
+
+.profile-card p,
+.profile-card span {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.profile-card strong {
+  display: block;
+  margin: 22px 0 10px;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.45;
+}
+
+.x-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.x-profile-card {
+  display: block;
+  min-height: 260px;
+  padding: 24px;
+  color: #172026 !important;
+  text-decoration: none !important;
+}
+
+.x-profile-card.team {
+  background: #111820;
+  color: #fff !important;
+}
+
+.x-profile-card > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: start;
+  margin-bottom: 24px;
+}
+
+.x-profile-card img {
+  width: 74px;
+  height: 74px;
+  object-fit: cover;
+  background: #fff;
+  border: 0;
+  border-radius: 50%;
+}
+
+.x-profile-card.team img {
+  width: 120px;
+  object-fit: contain;
+  border-radius: 0;
+  opacity: 0.82;
+}
+
+.x-profile-card span {
+  color: #6b766e;
+  font-weight: 900;
+}
+
+.x-profile-card.team span,
+.x-profile-card.team p,
+.x-profile-card.team em {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.x-profile-card h2 {
+  margin: 0 0 8px;
+  padding: 0;
+  color: inherit;
+  font-size: 2rem;
+  border: 0;
+}
+
+.x-profile-card p {
+  max-width: 620px;
+  margin: 0 0 22px;
+  color: #52606a;
+  line-height: 1.7;
+}
+
+.x-profile-card strong {
+  display: block;
+  color: inherit;
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+.x-profile-card em {
+  display: block;
+  margin-top: 8px;
+  color: #6b766e;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.about-section {
+  margin-top: 46px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.about-grid a {
+  display: block;
+  min-height: 220px;
+  padding: 24px;
+  color: #172026 !important;
+  text-decoration: none !important;
+}
+
+.about-grid span {
+  display: block;
+  margin-bottom: 14px;
+  color: #6b766e;
+  font-size: 0.92rem;
+  font-weight: 900;
+}
+
+.about-grid strong {
+  display: block;
+  color: #111820;
+  font-size: 1.45rem;
+  line-height: 1.3;
+}
+
+.about-grid p {
+  margin: 14px 0 0;
+  color: #52606a;
+  line-height: 1.75;
+}
+
+.team-intro {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 32px;
+  align-items: center;
+  padding: 30px;
+  background: #fbf4df;
+}
+
+.team-intro img {
+  width: 100%;
+  max-height: 150px;
+  object-fit: contain;
+  border: 0;
+  border-radius: 0;
+  opacity: 0.72;
+}
+
+.team-intro h2 {
+  margin: 0 0 14px;
+  padding: 0;
+  color: #111820;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.12;
+  border: 0;
+}
+
+.team-intro p:not(.eyebrow) {
+  max-width: 840px;
+  color: #52606a;
+  line-height: 1.8;
+}
+
+.team-intro a {
+  display: inline-flex;
+  margin-top: 10px;
+  color: #172026 !important;
+  font-weight: 900;
 }
 
 .placeholder-page {
@@ -1431,6 +1742,11 @@ main > .container-fluid > .row > .side-col {
   .feature-grid,
   .two-col,
   .placeholder-list,
+  .blog-hub-grid,
+  .about-hero,
+  .x-card-grid,
+  .about-grid,
+  .team-intro,
   .run-hero,
   .run-result-card,
   .run-method,
@@ -1476,6 +1792,24 @@ main > .container-fluid > .row > .side-col {
 
   .post-vcard-panel {
     grid-template-columns: 1fr;
+  }
+
+  .about-pro {
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .blog-hub,
+  .about-hero > div,
+  .profile-card,
+  .x-profile-card,
+  .about-grid a,
+  .team-intro {
+    border-radius: 10px;
+  }
+
+  .team-intro img {
+    max-width: 220px;
   }
 
   .run-hero {
@@ -1542,6 +1876,12 @@ main > .container-fluid > .row > .side-col {
   .dash-card,
   .feature-card,
   .about-card,
+  .blog-hub,
+  .about-hero > div,
+  .profile-card,
+  .x-profile-card,
+  .about-grid a,
+  .team-intro,
   .run-tool {
     padding: 20px;
   }

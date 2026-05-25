@@ -11,8 +11,8 @@ banner_img_height: 0
 {% raw %}
 <section class="run-worth-page return-illusion-page" data-return-illusion>
   <div class="run-brand-row">
-    <span>达芬七 · Stanly Team</span>
-    <img src="/img/stanly-team.png" alt="Stanly Team Logo" />
+    <span>达芬七 · Stanley Team</span>
+    <img src="/img/stanly-team.png" alt="Stanley Team Logo" />
   </div>
 
   <div class="run-hero">
@@ -26,7 +26,7 @@ banner_img_height: 0
       </div>
     </div>
     <aside class="run-sample-card" aria-label="示例结果卡片">
-      <span>达芬七出品 · Stanly Team</span>
+      <span>达芬七出品 · Stanley Team</span>
       <strong>61</strong>
       <b>机场循环播放型</b>
       <em>机票查了 37 次，行李一次没收</em>
@@ -50,8 +50,8 @@ banner_img_height: 0
     <section class="run-result" data-result hidden>
       <div class="run-result-card" data-result-card>
         <div class="run-report-head">
-          <span>我的回国精神状态报告 · 达芬七出品 · Stanly Team</span>
-          <img src="/img/stanly-team.png" alt="Stanly Team Logo" data-team-logo />
+          <span>我的回国精神状态报告 · 达芬七出品 · Stanley Team</span>
+          <img src="/img/stanly-team.png" alt="Stanley Team Logo" data-team-logo />
         </div>
         <div class="run-result-main">
           <div class="run-score-box">
@@ -73,7 +73,7 @@ banner_img_height: 0
           <div>
             <strong>回国幻觉浓度测试</strong>
             <span>达芬七 @SuisPasDaVinci</span>
-            <span>Stanly Team · v0.1 · 2026-05-23</span>
+            <span>Stanley Team · v0.1 · 2026-05-23</span>
           </div>
           <div class="run-qr-card">
             <img src="/img/x-follow-qr.png" alt="关注达芬七 X 二维码" data-follow-qr />
