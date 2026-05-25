@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --site-width: 1440px;
+  --content-width: 1440px;
+}
+
 html,
 body {
   overflow-x: hidden;
@@ -58,9 +63,23 @@ main {
   box-shadow: none !important;
 }
 
-#board > .container,
-#board .col-md-10 {
-  max-width: none !important;
+#board > .container {
+  width: 100%;
+  max-width: var(--site-width) !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+#board .row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+#board .col-md-10,
+#board .col-md-12 {
+  max-width: 100% !important;
   padding-right: 0 !important;
   padding-left: 0 !important;
   flex: 0 0 100%;
@@ -72,11 +91,26 @@ main {
 
 .container-fluid,
 .container {
-  max-width: 1500px;
+  max-width: var(--site-width);
 }
 
 .markdown-body {
   letter-spacing: 0;
+}
+
+.post-content,
+#board-ctn,
+main > .container,
+main > .container-fluid > .row > .col-lg-8.nopadding-x-md {
+  width: 100%;
+  max-width: var(--site-width) !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  flex: 0 0 100%;
+}
+
+main > .container-fluid > .row > .side-col {
+  display: none !important;
 }
 
 .markdown-body a {
@@ -95,7 +129,7 @@ main {
 }
 
 .home-shell {
-  max-width: 1440px;
+  max-width: var(--site-width);
   margin: 0 auto;
   padding: 10px 0 42px;
 }
@@ -444,7 +478,7 @@ main {
 }
 
 .placeholder-page {
-  max-width: 900px;
+  max-width: var(--content-width);
   margin: 0 auto;
   padding: 58px 0 36px;
 }
@@ -497,7 +531,7 @@ main {
 }
 
 .run-worth-page {
-  max-width: 1040px;
+  max-width: var(--content-width);
   margin: 0 auto;
   padding: 22px 0 48px;
 }
@@ -1221,7 +1255,7 @@ main {
   display: flex;
   align-items: stretch;
   gap: 18px;
-  max-width: 920px;
+  max-width: var(--content-width);
   margin-bottom: 18px !important;
   padding: 12px;
   background: #fff;
