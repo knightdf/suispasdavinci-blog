@@ -128,6 +128,38 @@ main > .container-fluid > .row > .side-col {
   border-bottom: 0;
 }
 
+.x-source-link {
+  margin: 0 0 24px;
+}
+
+.x-source-link a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 12px;
+  color: #172026 !important;
+  text-decoration: none !important;
+  background: #fff;
+  border: 1px solid rgba(23, 32, 38, 0.14);
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(23, 32, 38, 0.05);
+}
+
+.x-source-link a::before {
+  content: "X";
+  display: inline-grid;
+  width: 20px;
+  height: 20px;
+  place-items: center;
+  margin-right: 8px;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 900;
+  line-height: 1;
+  background: #111820;
+  border-radius: 50%;
+}
+
 .home-shell {
   max-width: var(--site-width);
   margin: 0 auto;

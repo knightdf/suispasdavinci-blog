@@ -15,7 +15,10 @@ tags:
   - AI工具
   - AI编程
   - 效率工具
+published: false
 ---
+<p class="x-source-link"><a href="https://x.com/SuisPasDaVinci/articles/2044266137236434944" target="_blank" rel="noopener noreferrer">在 X 阅读原文</a></p>
+
 
 这不是那种“复制三条命令秒通”的教程，而是一篇把真实报错、错误判断、重装过程、Telegram 接入、模型额度坑，全都摊开讲清楚的实战记录。你如果也想拿一台旧笔记本跑 Hermes，这篇会替你省掉很多无效折腾。
 

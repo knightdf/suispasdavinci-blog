@@ -48,13 +48,13 @@ banner_img_height: 0
   <section class="home-section">
     <div class="section-title">
       <p>精选长文</p>
-      <h2>按 X 曝光先看这几篇</h2>
+      <h2>先看这几篇</h2>
     </div>
     <div class="article-grid">
       <a class="article-card large" href="/2026/04/18/2026-04-18-加拿大报税季-一场3000万人的驯化游戏/">
         <img src="https://pbs.twimg.com/media/HGNyUkNWgAAZcOX.jpg" alt="加拿大报税季文章封面" />
         <div>
-          <span>加拿大生活 · 294K曝光</span>
+          <span>加拿大生活</span>
           <h3>加拿大报税季：一场3000万人的驯化游戏</h3>
           <p>税不是一张表，是普通人在系统里学会服从的过程。</p>
         </div>
@@ -62,21 +62,21 @@ banner_img_height: 0
       <a class="article-card" href="/2026/05/10/2026-05-10-1200万流量视频背后的秘密-我只用7个工具找素材/">
         <img src="https://pbs.twimg.com/media/HH7gVApXwAUOy-P.jpg" alt="1200万流量视频背后的素材工具封面" />
         <div>
-          <span>AI与工具 · 89K曝光</span>
+          <span>AI与工具</span>
           <h3>1200万流量视频背后的秘密：我只用7个工具找素材</h3>
         </div>
       </a>
       <a class="article-card" href="/2026/05/01/2026-05-01-五一出国玩才发现-中国人学英语十年-最后练出来的是羞耻感/">
         <img src="https://pbs.twimg.com/media/HHPYLgnXEAAmRvC.jpg" alt="中国人学英语十年最后练出来的是羞耻感封面" />
         <div>
-          <span>语言学习 · 45K曝光</span>
+          <span>语言学习</span>
           <h3>中国人学英语十年，最后练出来的是羞耻感</h3>
         </div>
       </a>
       <a class="article-card" href="/2026/04/20/2026-04-20-加拿大🇨🇦养老天堂-老了才知道是骗局/">
         <img src="https://pbs.twimg.com/media/HGWeOP3WIAETKU1.jpg" alt="加拿大养老天堂文章封面" />
         <div>
-          <span>加拿大生活 · 39K曝光</span>
+          <span>加拿大生活</span>
           <h3>加拿大养老天堂？老了才知道是骗局</h3>
         </div>
       </a>
