@@ -117,6 +117,27 @@ main > .container-fluid > .row > .side-col {
   font-weight: 700;
 }
 
+footer,
+.footer-inner,
+.footer-content {
+  color: #6b766e !important;
+  letter-spacing: 0;
+}
+
+footer a,
+.footer-inner a,
+.footer-content a {
+  color: #172026 !important;
+  font-weight: 800;
+  text-decoration: none !important;
+}
+
+.footer-sep {
+  display: inline-block;
+  margin: 0 8px;
+  color: #c7bda5;
+}
+
 .markdown-body h1,
 .markdown-body h2,
 .markdown-body h3 {
@@ -739,6 +760,115 @@ main > .container-fluid > .row > .side-col {
   color: #6b766e;
   font-style: normal;
   font-weight: 800;
+}
+
+.legal-page {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 26px 0 58px;
+}
+
+.legal-hero,
+.legal-body,
+.contact-grid a {
+  background: #fff;
+  border: 1px solid rgba(23, 32, 38, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 14px 34px rgba(23, 32, 38, 0.05);
+}
+
+.legal-hero {
+  padding: clamp(28px, 5vw, 54px);
+  margin-bottom: 18px;
+}
+
+.legal-hero h1 {
+  margin: 0 0 14px;
+  padding: 0;
+  color: #111820;
+  font-size: clamp(2.4rem, 5vw, 5rem);
+  line-height: 1.04;
+  border: 0;
+}
+
+.legal-hero p:not(.eyebrow) {
+  max-width: 760px;
+  margin: 0;
+  color: #52606a;
+  font-size: 1.08rem;
+  line-height: 1.85;
+}
+
+.legal-body {
+  padding: clamp(24px, 4vw, 42px);
+}
+
+.legal-body section + section {
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(23, 32, 38, 0.08);
+}
+
+.legal-body h2 {
+  margin: 0 0 12px;
+  padding: 0;
+  color: #111820;
+  font-size: 1.45rem;
+  border: 0;
+}
+
+.legal-body p {
+  max-width: 920px;
+  margin: 0 0 12px;
+  color: #45515a;
+  line-height: 1.9;
+}
+
+.legal-body a {
+  color: #172026 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+}
+
+.legal-updated {
+  margin-top: 34px !important;
+  color: #7a766a !important;
+  font-weight: 800;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.contact-grid a {
+  display: block;
+  min-height: 190px;
+  padding: 24px;
+  color: #172026 !important;
+  text-decoration: none !important;
+}
+
+.contact-grid span {
+  display: block;
+  margin-bottom: 12px;
+  color: #6b766e;
+  font-weight: 900;
+}
+
+.contact-grid strong {
+  display: block;
+  color: #111820;
+  font-size: 1.45rem;
+  line-height: 1.25;
+}
+
+.contact-grid p {
+  margin: 14px 0 0;
+  color: #52606a;
+  line-height: 1.75;
 }
 
 .about-section {
@@ -1746,6 +1876,7 @@ main > .container-fluid > .row > .side-col {
   .about-hero,
   .x-card-grid,
   .about-grid,
+  .contact-grid,
   .team-intro,
   .run-hero,
   .run-result-card,
@@ -1799,11 +1930,19 @@ main > .container-fluid > .row > .side-col {
     padding-top: 0;
   }
 
+  .legal-page {
+    width: 100%;
+    padding-top: 0;
+  }
+
   .blog-hub,
   .about-hero > div,
   .profile-card,
   .x-profile-card,
   .about-grid a,
+  .legal-hero,
+  .legal-body,
+  .contact-grid a,
   .team-intro {
     border-radius: 10px;
   }
@@ -1881,6 +2020,9 @@ main > .container-fluid > .row > .side-col {
   .profile-card,
   .x-profile-card,
   .about-grid a,
+  .legal-hero,
+  .legal-body,
+  .contact-grid a,
   .team-intro,
   .run-tool {
     padding: 20px;

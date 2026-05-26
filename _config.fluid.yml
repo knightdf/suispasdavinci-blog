@@ -465,9 +465,13 @@ footer:
   # 页脚第一行文字的 HTML，建议保留 Fluid 的链接，用于向更多人推广本主题
   # HTML of the first line of the footer, it is recommended to keep the Fluid link to promote this theme to more people
   content: '
-    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
-    <i class="iconfont icon-love"></i>
-    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
+    <span>达芬七 · Stanley Team</span>
+    <span class="footer-sep">/</span>
+    <a href="/privacy/"><span>隐私政策</span></a>
+    <span class="footer-sep">/</span>
+    <a href="/disclaimer/"><span>免责声明</span></a>
+    <span class="footer-sep">/</span>
+    <a href="/contact/"><span>联系</span></a>
   '
 
   # 展示网站的 PV、UV 统计数
