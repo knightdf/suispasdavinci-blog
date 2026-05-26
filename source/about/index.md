@@ -34,8 +34,8 @@ type: page
       </div>
       <h2>达芬七</h2>
       <p>加拿大十年老炮｜普通人逆袭千万之路｜把润学做成工具</p>
-      <strong>16.7K+ followers</strong>
-      <em>点开 X 查看实时数据</em>
+      <strong>个人 X 主页</strong>
+      <em>点开查看最新动态</em>
     </a>
 
     <a class="x-profile-card team" href="https://x.com/Stanleysobest" target="_blank" rel="noopener noreferrer">
@@ -45,8 +45,8 @@ type: page
       </div>
       <h2>Stanley Team</h2>
       <p>全球顶尖的去中心化 AI 研究与应用团队，连接技术、学术、产业与内容影响力。</p>
-      <strong>48.8K+ followers</strong>
-      <em>点开 X 查看实时数据</em>
+      <strong>Stanley Team 主页</strong>
+      <em>点开查看最新动态</em>
     </a>
   </div>
 
