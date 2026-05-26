@@ -8,7 +8,7 @@ type: page
 <section class="legal-page contact-page">
   <div class="legal-hero">
     <p class="eyebrow">Contact</p>
-    <h1>联系达芬七</h1>
+    <h1>联系达芬七｜Seven</h1>
     <p>如果你想聊海外生活、出海工具、AI 工具、润前体检、文章合作或网站问题，可以从下面几个入口找我。</p>
   </div>
 
@@ -27,7 +27,7 @@ type: page
 
     <a href="/about/">
       <span>关于本站</span>
-      <strong>达芬七 · Stanley Team</strong>
+      <strong>达芬七｜Seven · Stanley Team</strong>
       <p>想先了解我是谁、这个站在做什么，可以从关于页开始。</p>
     </a>
   </div>

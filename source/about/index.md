@@ -8,18 +8,18 @@ type: page
 <section class="about-pro">
   <div class="about-hero">
     <div>
-      <p class="eyebrow">达芬七 · Stanley Team</p>
+      <p class="eyebrow">达芬七｜Seven · Stanley Team</p>
       <h1>加拿大十年，把海外生活、润学和 AI 工具拆成能用的判断。</h1>
       <p>这里不是移民中介页面，也不是资源搬运站。我写真实海外生活、出海工具、语言学习和人生重启相关的文章，也把一些复杂问题做成小工具。</p>
       <div class="about-actions">
-        <a class="btn primary" href="https://x.com/intent/follow?screen_name=SuisPasDaVinci" target="_blank" rel="noopener noreferrer">关注达芬七</a>
+        <a class="btn primary" href="https://x.com/intent/follow?screen_name=SuisPasDaVinci" target="_blank" rel="noopener noreferrer">关注达芬七｜Seven</a>
         <a class="btn" href="https://x.com/Stanleysobest" target="_blank" rel="noopener noreferrer">查看 Stanley Team</a>
       </div>
     </div>
 
     <aside class="profile-card">
-      <img src="/img/x-avatar.jpg" alt="达芬七头像" />
-      <h2>达芬七</h2>
+      <img src="/img/x-avatar.jpg" alt="达芬七｜Seven头像" />
+      <h2>达芬七｜Seven</h2>
       <p>@SuisPasDaVinci</p>
       <strong>加拿大十年。Stanley Team 成员。</strong>
       <span>写移民幻觉、海外生活、出海工具和普通人的重启决策。</span>
@@ -29,10 +29,10 @@ type: page
   <div class="x-card-grid">
     <a class="x-profile-card" href="https://x.com/SuisPasDaVinci" target="_blank" rel="noopener noreferrer">
       <div>
-        <img src="/img/x-avatar.jpg" alt="达芬七 X 头像" />
+        <img src="/img/x-avatar.jpg" alt="达芬七｜Seven X 头像" />
         <span>个人主页</span>
       </div>
-      <h2>达芬七</h2>
+      <h2>达芬七｜Seven</h2>
       <p>加拿大十年老炮｜普通人逆袭千万之路｜把润学做成工具</p>
       <strong>个人 X 主页</strong>
       <em>点开查看最新动态</em>

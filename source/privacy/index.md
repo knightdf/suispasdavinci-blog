@@ -9,7 +9,7 @@ type: page
   <div class="legal-hero">
     <p class="eyebrow">Privacy Policy</p>
     <h1>隐私政策</h1>
-    <p>这个站的原则很简单：能不收集就不收集，能少记录就少记录。这里主要是达芬七的文章、工具和个人主页，不是一个需要用户注册的平台。</p>
+    <p>这个站的原则很简单：能不收集就不收集，能少记录就少记录。这里主要是达芬七｜Seven 的文章、工具和个人主页，不是一个需要用户注册的平台。</p>
   </div>
 
   <div class="legal-body">

@@ -2,7 +2,7 @@
 title: 润值计算器：测测你适不适合人生重启
 date: 2026-05-21
 type: page
-description: 达芬七的润值计算器，从钱、时间、环境、关系和未来五笔账，粗暴测测你适不适合人生重启。
+description: 达芬七｜Seven 的润值计算器，从钱、时间、环境、关系和未来五笔账，粗暴测测你适不适合人生重启。
 keywords: 润值计算器,润前体检,移民值不值,人生重启,海外生活适配度
 banner_img:
 banner_img_height: 0
@@ -11,7 +11,7 @@ banner_img_height: 0
 {% raw %}
 <section class="run-worth-page" data-run-worth>
   <div class="run-brand-row">
-    <span>达芬七 · Stanley Team</span>
+    <span>达芬七｜Seven · Stanley Team</span>
     <img src="/img/stanly-team.png" alt="Stanley Team Logo" />
   </div>
 
@@ -26,7 +26,7 @@ banner_img_height: 0
       </div>
     </div>
     <aside class="run-sample-card" aria-label="示例结果卡片">
-      <span>达芬七出品 · Stanley Team</span>
+      <span>达芬七｜Seven 出品 · Stanley Team</span>
       <strong>68</strong>
       <b>半只脚在门口</b>
       <em>另一只脚被现实拽住</em>
@@ -50,7 +50,7 @@ banner_img_height: 0
     <section class="run-result" data-result hidden>
       <div class="run-result-card" data-result-card>
         <div class="run-report-head">
-          <span>我的润学体检报告 · 达芬七出品 · Stanley Team</span>
+          <span>我的润学体检报告 · 达芬七｜Seven 出品 · Stanley Team</span>
           <img src="/img/stanly-team.png" alt="Stanley Team Logo" data-team-logo />
         </div>
         <div class="run-result-main">
@@ -72,11 +72,11 @@ banner_img_height: 0
         <div class="run-report-footer">
           <div>
             <strong>这逼移民移得值不值计算器</strong>
-            <span>达芬七 @SuisPasDaVinci</span>
+            <span>达芬七｜Seven @SuisPasDaVinci</span>
             <span>Stanley Team · v0.3 · 2026-05-22</span>
           </div>
           <div class="run-qr-card">
-            <img src="/img/x-follow-qr.png" alt="关注达芬七 X 二维码" data-follow-qr />
+            <img src="/img/x-follow-qr.png" alt="关注达芬七｜Seven X 二维码" data-follow-qr />
             <span>扫码关注 X</span>
           </div>
         </div>
@@ -106,10 +106,10 @@ banner_img_height: 0
   <section class="run-follow-strip">
     <div>
       <p class="eyebrow">继续看</p>
-      <h2>达芬七 · Stanley Team</h2>
+      <h2>达芬七｜Seven · Stanley Team</h2>
       <p>后面还会继续做润前体检、出海工具、海外生活决策这类小产品。</p>
     </div>
-    <img src="/img/x-follow-qr.png" alt="关注达芬七 X 二维码" />
+    <img src="/img/x-follow-qr.png" alt="关注达芬七｜Seven X 二维码" />
   </section>
 </section>
 
@@ -388,7 +388,7 @@ banner_img_height: 0
 
     ctx.fillStyle = '#e1111d';
     ctx.font = '900 32px Arial, sans-serif';
-    ctx.fillText('我的润学体检报告 · 达芬七出品', 110, 135);
+    ctx.fillText('我的润学体检报告 · 达芬七｜Seven 出品', 110, 135);
 
     ctx.fillStyle = '#e1111d';
     roundRect(ctx, 110, 180, 250, 180, 16);
@@ -460,7 +460,7 @@ banner_img_height: 0
     ctx.fillStyle = '#7b756b';
     ctx.font = '800 28px Arial, sans-serif';
     ctx.fillText('这逼移民移得值不值计算器', 110, 1318);
-    ctx.fillText('达芬七 @SuisPasDaVinci', 110, 1360);
+    ctx.fillText('达芬七｜Seven @SuisPasDaVinci', 110, 1360);
     ctx.fillText('v0.3 · 2026-05-22', 110, 1402);
 
     drawImageContain(ctx, followQr, 780, 1228, 118, 118);
@@ -524,7 +524,7 @@ banner_img_height: 0
     resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
     root.querySelector('[data-copy]').onclick = function () {
-      const text = '我在达芬七的润值计算器测了 ' + total + ' 分：' + label.title + '。' + label.judge + ' 最弱维度：' + weakest.name + '账。 https://suispasdavinci.com/tools/run-worth/';
+      const text = '我在达芬七｜Seven 的润值计算器测了 ' + total + ' 分：' + label.title + '。' + label.judge + ' 最弱维度：' + weakest.name + '账。 https://suispasdavinci.com/tools/run-worth/';
       navigator.clipboard.writeText(text).then(function () {
         root.querySelector('[data-copy]').textContent = '已复制';
       });

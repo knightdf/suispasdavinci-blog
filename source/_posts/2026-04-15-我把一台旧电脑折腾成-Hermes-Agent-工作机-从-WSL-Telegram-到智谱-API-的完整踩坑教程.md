@@ -1,7 +1,7 @@
 ---
 title: "我把一台旧电脑折腾成 Hermes Agent 工作机：从 WSL、Telegram 到智谱 API 的完整踩坑教程"
 date: "2026-04-15 12:00:00"
-author: "达芬七 · Stanley Team"
+author: "达芬七｜Seven · Stanley Team"
 platform: "X Articles"
 description: "这不是那种“复制三条命令秒通”的教程，而是一篇把真实报错、错误判断、重装过程、Telegram 接入、模型额度坑，全都摊开讲清楚的实战记录。你如果也想拿一台旧笔记本跑 Hermes，这篇会替你省掉很多无效折腾。"
 index_img: ""

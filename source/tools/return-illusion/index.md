@@ -2,7 +2,7 @@
 title: 回国幻觉浓度测试：测测你是不是想回到不存在的中国
 date: 2026-05-23
 type: page
-description: 达芬七的回国幻觉浓度测试，测测你想回的是现实里的国内，还是脑子里那个已经不存在的平行宇宙。
+description: 达芬七｜Seven 的回国幻觉浓度测试，测测你想回的是现实里的国内，还是脑子里那个已经不存在的平行宇宙。
 keywords: 回国幻觉浓度测试,回国值不值,海外华人回流,反向重启,润后体检
 banner_img:
 banner_img_height: 0
@@ -11,7 +11,7 @@ banner_img_height: 0
 {% raw %}
 <section class="run-worth-page return-illusion-page" data-return-illusion>
   <div class="run-brand-row">
-    <span>达芬七 · Stanley Team</span>
+    <span>达芬七｜Seven · Stanley Team</span>
     <img src="/img/stanly-team.png" alt="Stanley Team Logo" />
   </div>
 
@@ -26,7 +26,7 @@ banner_img_height: 0
       </div>
     </div>
     <aside class="run-sample-card" aria-label="示例结果卡片">
-      <span>达芬七出品 · Stanley Team</span>
+      <span>达芬七｜Seven 出品 · Stanley Team</span>
       <strong>61</strong>
       <b>机场循环播放型</b>
       <em>机票查了 37 次，行李一次没收</em>
@@ -50,7 +50,7 @@ banner_img_height: 0
     <section class="run-result" data-result hidden>
       <div class="run-result-card" data-result-card>
         <div class="run-report-head">
-          <span>我的回国精神状态报告 · 达芬七出品 · Stanley Team</span>
+          <span>我的回国精神状态报告 · 达芬七｜Seven 出品 · Stanley Team</span>
           <img src="/img/stanly-team.png" alt="Stanley Team Logo" data-team-logo />
         </div>
         <div class="run-result-main">
@@ -72,11 +72,11 @@ banner_img_height: 0
         <div class="run-report-footer">
           <div>
             <strong>回国幻觉浓度测试</strong>
-            <span>达芬七 @SuisPasDaVinci</span>
+            <span>达芬七｜Seven @SuisPasDaVinci</span>
             <span>Stanley Team · v0.1 · 2026-05-23</span>
           </div>
           <div class="run-qr-card">
-            <img src="/img/x-follow-qr.png" alt="关注达芬七 X 二维码" data-follow-qr />
+            <img src="/img/x-follow-qr.png" alt="关注达芬七｜Seven X 二维码" data-follow-qr />
             <span>扫码关注 X</span>
           </div>
         </div>
@@ -372,7 +372,7 @@ banner_img_height: 0
     ctx.stroke();
     ctx.fillStyle = '#111820';
     ctx.font = '900 32px Arial, sans-serif';
-    ctx.fillText('我的回国精神状态报告 · 达芬七出品', 110, 135);
+    ctx.fillText('我的回国精神状态报告 · 达芬七｜Seven 出品', 110, 135);
     ctx.fillStyle = '#ffcc33';
     roundRect(ctx, 110, 180, 250, 180, 16);
     ctx.fill();
@@ -437,7 +437,7 @@ banner_img_height: 0
     ctx.fillStyle = '#7b756b';
     ctx.font = '800 26px Arial, sans-serif';
     ctx.fillText('回国幻觉浓度测试', 110, 1320);
-    ctx.fillText('达芬七 @SuisPasDaVinci', 110, 1360);
+    ctx.fillText('达芬七｜Seven @SuisPasDaVinci', 110, 1360);
     ctx.fillText('v0.1 · 2026-05-23', 110, 1400);
     drawImageContain(ctx, followQr, 500, 1278, 118, 118);
     ctx.save();
@@ -499,7 +499,7 @@ banner_img_height: 0
     resultEl.hidden = false;
     resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
     root.querySelector('[data-copy]').onclick = function () {
-      const text = '我在达芬七的回国幻觉浓度测试测了 ' + total + ' 分：' + label.title + '。' + label.judge + ' 最弱病灶：' + weakest.name + '。 https://suispasdavinci.com/tools/return-illusion/';
+      const text = '我在达芬七｜Seven 的回国幻觉浓度测试测了 ' + total + ' 分：' + label.title + '。' + label.judge + ' 最弱病灶：' + weakest.name + '。 https://suispasdavinci.com/tools/return-illusion/';
       navigator.clipboard.writeText(text).then(function () {
         root.querySelector('[data-copy]').textContent = '已复制';
       });

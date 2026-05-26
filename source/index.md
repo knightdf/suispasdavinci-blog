@@ -1,5 +1,5 @@
 ---
-title: 达芬七
+title: 达芬七｜Seven
 date: 2026-05-21
 type: page
 banner_img:
@@ -14,7 +14,7 @@ banner_img_height: 0
 
   <section class="home-dashboard">
     <div class="intro-panel">
-      <p class="eyebrow">达芬七 · Stanley Team</p>
+      <p class="eyebrow">达芬七｜Seven · Stanley Team</p>
       <h1>加拿大十年，把润学和海外生活拆成工具。</h1>
       <p><a class="inline-team-link" href="https://x.com/Stanleysobest" target="_blank" rel="noopener noreferrer">Stanley Team</a> 成员。这里放文章、清单、小工具和海外生活判断，少一点玄学，多一点能拿来做决定的东西。</p>
       <a href="https://x.com/intent/follow?screen_name=SuisPasDaVinci" target="_blank" rel="noopener noreferrer">关注 X @SuisPasDaVinci</a>
@@ -39,7 +39,7 @@ banner_img_height: 0
       </a>
       <a class="dash-card" href="/about/">
         <span>关于</span>
-        <h2>关于达芬七</h2>
+        <h2>关于达芬七｜Seven</h2>
         <p>加拿大十年，写海外生活和人生重启。最近在把润学做成工具。</p>
       </a>
     </div>
@@ -98,10 +98,10 @@ banner_img_height: 0
     </div>
 
     <aside class="about-card">
-      <img src="/img/x-avatar.jpg" alt="达芬七头像" />
-      <h2>达芬七</h2>
+      <img src="/img/x-avatar.jpg" alt="达芬七｜Seven头像" />
+      <h2>达芬七｜Seven</h2>
       <p>加拿大十年。<a href="https://x.com/Stanleysobest" target="_blank" rel="noopener noreferrer">Stanley Team</a> 成员，专写移民幻觉、海外生活、出海工具和普通人的重启决策。</p>
-      <a href="/about/">关于达芬七</a>
+      <a href="/about/">关于达芬七｜Seven</a>
     </aside>
   </section>
 </section>

@@ -2,7 +2,7 @@
 title: VCard虚拟卡2026测评：ChatGPT、Claude和海外SaaS订阅怎么少踩坑
 subtitle: 支持USDT充值的虚拟卡，不是万能钥匙，但能把海外订阅和企业支付风险拆开。
 date: 2026-05-12
-author: 达芬七 DaVinCi
+author: 达芬七｜Seven
 sticky: 100
 description: VCard虚拟卡到底适不适合订阅ChatGPT、Claude和海外SaaS？这篇写给跨境团队、广告投放、独立开发者和经常订阅海外工具的人，重点讲清楚使用场景、USDT充值、风险隔离、预算控制和企业支付管理。
 index_img: /img/virtual-card-guide/10-virtual-card-step.jpg
