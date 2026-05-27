@@ -5,7 +5,7 @@ date: 2026-05-12
 author: 达芬七｜Seven
 sticky: 100
 description: VCard虚拟卡到底适不适合订阅ChatGPT、Claude和海外SaaS？这篇写给跨境团队、广告投放、独立开发者和经常订阅海外工具的人，重点讲清楚使用场景、USDT充值、风险隔离、预算控制和企业支付管理。
-index_img: /img/virtual-card-guide/10-virtual-card-step.jpg
+index_img: /img/vcard-article-banner.png
 categories:
   - AI与工具
 tags:
@@ -16,7 +16,7 @@ tags:
 
 # VCard虚拟卡2026测评：ChatGPT、Claude和海外SaaS订阅怎么少踩坑
 
-![](/img/virtual-card-guide/10-virtual-card-step.jpg)
+![](/img/vcard-article-banner.png)
 
 {% raw %}
 <div class="post-vcard-panel">

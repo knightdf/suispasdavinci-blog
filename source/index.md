@@ -51,12 +51,19 @@ banner_img_height: 0
       <h2>先看这几篇</h2>
     </div>
     <div class="article-grid">
-      <a class="article-card large" href="/2026/04/18/2026-04-18-加拿大报税季-一场3000万人的驯化游戏/">
+      <a class="article-card large" href="/2026/05/12/2026-05-12-virtual-card-chatgpt-claude-guide/">
+        <img src="/img/vcard-article-banner.png" alt="VCard 虚拟卡测评文章封面" />
+        <div>
+          <span>AI与工具</span>
+          <h3>海外 AI 服务订阅与虚拟卡</h3>
+          <p>ChatGPT、Claude、海外 SaaS，先把支付、风控和预算隔离搞清楚。</p>
+        </div>
+      </a>
+      <a class="article-card" href="/2026/04/18/2026-04-18-加拿大报税季-一场3000万人的驯化游戏/">
         <img src="https://pbs.twimg.com/media/HGNyUkNWgAAZcOX.jpg" alt="加拿大报税季文章封面" />
         <div>
           <span>加拿大生活</span>
           <h3>加拿大报税季：一场3000万人的驯化游戏</h3>
-          <p>税不是一张表，是普通人在系统里学会服从的过程。</p>
         </div>
       </a>
       <a class="article-card" href="/2026/05/10/2026-05-10-1200万流量视频背后的秘密-我只用7个工具找素材/">
