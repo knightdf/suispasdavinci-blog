@@ -7,45 +7,50 @@ banner_img_height: 0
 ---
 
 {% raw %}
-<section class="home-shell">
+<section class="home-shell home-brutal">
+  <section class="home-hero">
+    <div>
+      <p class="home-redline">达芬七｜Seven · Stanley Team</p>
+      <h1>把润学、出海和海外生活，拆成能用的工具。</h1>
+      <div class="home-yellow-note">不是资源站，也不是中介门面。先把账算清楚，再谈人生重启。</div>
+      <p class="home-lead"><a class="inline-team-link" href="https://x.com/Stanleysobest" target="_blank" rel="noopener noreferrer">Stanley Team</a> 成员。加拿大十年，写移民幻觉、海外生活、AI 工具、出海支付和普通人的重启决策。</p>
+      <div class="home-hero-actions">
+        <a class="btn primary" href="/tools/run-worth/">测润值</a>
+        <a class="btn quiet" href="/blog/">看长文</a>
+      </div>
+    </div>
+
+    <a class="home-score-card" href="/tools/run-worth/" aria-label="打开润值计算器">
+      <span>润前体检 001</span>
+      <strong>68</strong>
+      <b>半只脚在门口</b>
+      <em>另一只脚被现实拽住</em>
+    </a>
+  </section>
+
   <a class="top-feature-banner" href="/2026/05/12/2026-05-12-virtual-card-chatgpt-claude-guide/" aria-label="查看 VCard 虚拟卡测评">
     <img src="/img/vcard-banner.png" alt="VCard 虚拟卡测评置顶图" />
   </a>
 
-  <section class="home-dashboard">
-    <div class="intro-panel">
-      <p class="eyebrow">达芬七｜Seven · Stanley Team</p>
-      <h1>加拿大十年，把润学和海外生活拆成工具。</h1>
-      <p><a class="inline-team-link" href="https://x.com/Stanleysobest" target="_blank" rel="noopener noreferrer">Stanley Team</a> 成员。这里放文章、清单、小工具和海外生活判断，少一点玄学，多一点能拿来做决定的东西。</p>
-      <a href="https://x.com/intent/follow?screen_name=SuisPasDaVinci" target="_blank" rel="noopener noreferrer">关注 X @SuisPasDaVinci</a>
-    </div>
-
-    <div class="card-shelf">
-      <a class="dash-card primary" href="/tools/run-worth/">
-        <span>润前体检 001</span>
-        <h2>润值计算器</h2>
-        <p>测测你适不适合人生重启。钱、时间、环境、关系和未来，哪笔账最拖后腿。</p>
-        <em>开始测试</em>
-      </a>
-      <a class="dash-card" href="/2026/05/12/2026-05-12-virtual-card-chatgpt-claude-guide/">
-        <span>置顶文章</span>
-        <h2>海外 AI 服务订阅与虚拟卡</h2>
-        <p>ChatGPT、Claude、海外 SaaS，先把支付和风控搞清楚。</p>
-      </a>
-      <a class="dash-card" href="/blog/">
-        <span>文章</span>
-        <h2>最新长文</h2>
-        <p>移民幻觉、加拿大生活、英语、AI、出海工具。</p>
-      </a>
-      <a class="dash-card" href="/about/">
-        <span>关于</span>
-        <h2>关于达芬七｜Seven</h2>
-        <p>加拿大十年，写海外生活和人生重启。最近在把润学做成工具。</p>
-      </a>
-    </div>
+  <section class="home-tool-strip" aria-label="常用入口">
+    <a class="home-tool-card primary" href="/tools/run-worth/">
+      <span>人生计算器</span>
+      <strong>润值计算器</strong>
+      <em>测测你适不适合人生重启</em>
+    </a>
+    <a class="home-tool-card" href="/2026/05/12/2026-05-12-virtual-card-chatgpt-claude-guide/">
+      <span>出海工具</span>
+      <strong>VCard 虚拟卡测评</strong>
+      <em>海外 AI 服务订阅避坑</em>
+    </a>
+    <a class="home-tool-card" href="/blog/">
+      <span>长文库</span>
+      <strong>移民幻觉与加拿大生活</strong>
+      <em>把吵架题拆成判断题</em>
+    </a>
   </section>
 
-  <section class="home-section">
+  <section class="home-section home-featured">
     <div class="section-title">
       <p>精选长文</p>
       <h2>先看这几篇</h2>
@@ -90,7 +95,7 @@ banner_img_height: 0
     </div>
   </section>
 
-  <section class="home-section two-col">
+  <section class="home-section two-col home-bottom-grid">
     <div>
       <div class="section-title">
         <p>先从这里进</p>

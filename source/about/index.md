@@ -40,7 +40,6 @@ type: page
 
     <a class="x-profile-card team" href="https://x.com/Stanleysobest" target="_blank" rel="noopener noreferrer">
       <div>
-        <img src="/img/stanly-team.png" alt="Stanley Team 标志" />
         <span>团队主页</span>
       </div>
       <h2>Stanley Team</h2>
@@ -75,7 +74,6 @@ type: page
   </section>
 
   <section class="about-section team-intro">
-    <img src="/img/stanly-team.png" alt="Stanley Team Logo" />
     <div>
       <p class="eyebrow">Stanley Team</p>
       <h2>全球顶尖的去中心化 AI 研究与应用团队。</h2>
