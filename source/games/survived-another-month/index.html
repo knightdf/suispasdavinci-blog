@@ -262,6 +262,14 @@
             font-size: 0.9rem;
             line-height: 1.45;
         }
+        .version-tag {
+            margin: -0.6rem 0 0.9rem;
+            color: #c7d2fe;
+            font-size: 0.82rem;
+            font-weight: 900;
+            letter-spacing: 0;
+            text-shadow: 2px 2px 0 #020617;
+        }
         @media (max-width: 560px) {
             .rules, .share-stats { grid-template-columns: 1fr; }
             h1 { font-size: 2rem; }
@@ -368,6 +376,7 @@
         <div id="startBadge" class="screen-badge">CANADA CASHFLOW SURVIVAL</div>
         <h1 id="startTitle">本月又活下来了</h1>
         <div id="startSubtitle" class="subtitle">加拿大现金流闪避小游戏</div>
+        <div id="gameVersionTag" class="version-tag">betaCL001</div>
         <div id="startInfo" class="info"></div>
         <div id="rulesBox" class="rules">
         </div>
@@ -452,6 +461,7 @@
     <script>
         const canvas = document.getElementById('gameCanvas');
         const ctx = canvas.getContext('2d');
+        const gameVersion = 'betaCL001';
         const assetBase = 'assets/canada-sprites/';
         const sprites = {};
         const spritePaths = {};
@@ -1010,7 +1020,9 @@
                     variant === 'ticket' ? 0.72 : 1;
                 return {
                     name: e.n,
-                    amount: e.a,
+                    amount: (!isBill && !isWeird)
+                        ? Math.round(e.a * (1 + Math.max(0, currentMonth - 7) * 0.12))
+                        : e.a,
                     type: e.t,
                     note: e.note || '',
                     variant,
@@ -1089,6 +1101,7 @@
             document.getElementById('langZh').classList.toggle('active', currentLang === 'zh');
             document.getElementById('langEn').classList.toggle('active', currentLang === 'en');
             document.getElementById('startBadge').textContent = t('startBadge');
+            document.getElementById('gameVersionTag').textContent = gameVersion;
             document.getElementById('startTitle').textContent = t('startTitle');
             document.getElementById('startSubtitle').textContent = t('startSubtitle');
             document.getElementById('startInfo').innerHTML = t('startInfo');
@@ -1110,7 +1123,9 @@
             document.getElementById('reviveBtn').textContent = t('reviveBtn');
             document.getElementById('giveUpBtn').textContent = t('giveUpBtn');
             document.getElementById('shareTitle').textContent = t('shareTitle');
-            document.getElementById('shareKicker').textContent = currentLang === 'en' ? 'CANADA CASHFLOW SURVIVAL REPORT' : '加拿大现金流生存报告';
+            document.getElementById('shareKicker').textContent = currentLang === 'en'
+                ? `CANADA CASHFLOW SURVIVAL REPORT · ${gameVersion}`
+                : `加拿大现金流生存报告 · ${gameVersion}`;
             document.getElementById('shareMonthsLabel').textContent = currentLang === 'en' ? 'Survived' : '存活时间';
             document.getElementById('shareMonthUnit').textContent = t('monthUnit').trimStart();
             document.getElementById('shareBalanceLabel').textContent = currentLang === 'en' ? 'Final balance' : '最终余额';
@@ -1118,8 +1133,8 @@
             document.getElementById('copyStatus').textContent = t('copyReady');
             document.getElementById('copyBtn').textContent = t('copyBtn');
             document.getElementById('closeShareBtn').textContent = t('closeShare');
-            document.getElementById('resultSourceLine').textContent = t('sourceLine');
-            document.getElementById('shareSourceLine').textContent = t('sourceLine');
+            document.getElementById('resultSourceLine').textContent = `${t('sourceLine')} · ${gameVersion}`;
+            document.getElementById('shareSourceLine').textContent = `${t('sourceLine')} · ${gameVersion}`;
             if (gameState === 'level') showLevelScreen();
         }
 
@@ -1150,8 +1165,9 @@
             const weirdSource = weirdEvents.length
                 ? weirdEvents
                 : [{ n: '黄色问号盒', a: 0, t: 'weird', note: '不知道是救命还是手滑' }];
-            const incomeCount = 6 + Math.floor(currentMonth / 4);
-            const billCount = 14 + Math.min(currentMonth * 2, 24);
+            const lateGameRelief = Math.max(0, currentMonth - 7);
+            const incomeCount = 6 + Math.floor(currentMonth / 3) + lateGameRelief * 2;
+            const billCount = 14 + Math.min(Math.floor(currentMonth * 1.65), 20);
             const weirdCount = 1 + Math.floor(currentMonth / 6);
             
             itemsToSpawn = shuffle([
@@ -1214,7 +1230,7 @@
 
             items.push(makeLiveItem(item, 0, lane));
 
-            const waveChance = 0.10 + currentMonth * 0.015;
+            const waveChance = Math.min(0.22, 0.10 + currentMonth * 0.011);
             if (item.type === 'bill' && Math.random() < waveChance) {
                 const patternRoll = Math.random();
                 if (patternRoll < 0.32) {
@@ -1266,10 +1282,10 @@
             const laneCount = Math.max(4, Math.floor((playableBottom() - playTop) / 105));
             const laneHeight = (playableBottom() - playTop) / laneCount;
             const lane = Math.floor(Math.random() * laneCount);
-            const isRelief = Math.random() < 0.28;
+            const isRelief = Math.random() < Math.min(0.48, 0.28 + Math.max(0, currentMonth - 7) * 0.05);
             const item = isRelief ? {
                 name: '临时退税',
-                amount: 70 + currentMonth * 8,
+                amount: 70 + currentMonth * 8 + Math.max(0, currentMonth - 7) * 22,
                 type: 'income',
                 variant: 'cash',
                 width: 92,
@@ -2523,8 +2539,8 @@
                 .replace(/&nbsp;/g, ' ');
             const finalMoney = document.getElementById('finalMoney').textContent;
             return currentLang === 'en'
-                ? `I survived Canada for ${months} months\n\nKillshot log:\n${causes}\n\nFinal balance: ${finalMoney}\n\nSurvived Another Month\n${t('sourceLine')}`
-                : `我在加拿大活了 ${months} 个月\n\n斩杀记录：\n${causes}\n\n最终余额：${finalMoney}\n\n《本月又活下来了》\n${t('sourceLine')}`;
+                ? `I survived Canada for ${months} months\n\nKillshot log:\n${causes}\n\nFinal balance: ${finalMoney}\n\nSurvived Another Month · ${gameVersion}\n${t('sourceLine')}`
+                : `我在加拿大活了 ${months} 个月\n\n斩杀记录：\n${causes}\n\n最终余额：${finalMoney}\n\n《本月又活下来了》· ${gameVersion}\n${t('sourceLine')}`;
         }
 
         function fillShareCard() {
