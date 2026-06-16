@@ -46,7 +46,7 @@ banner_img_height: 0
     <a class="home-tool-card" href="/games/survived-another-month/">
       <span>小游戏</span>
       <strong>本月又活下来了</strong>
-      <em>加拿大账单闪避，手机也能玩</em>
+      <em>接收入，躲账单，活过12个月</em>
     </a>
     <a class="home-tool-card" href="/blog/">
       <span>长文库</span>
