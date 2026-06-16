@@ -43,6 +43,11 @@ banner_img_height: 0
       <strong>VCard 虚拟卡测评</strong>
       <em>海外 AI 服务订阅避坑</em>
     </a>
+    <a class="home-tool-card" href="/games/survived-another-month/">
+      <span>小游戏</span>
+      <strong>本月又活下来了</strong>
+      <em>加拿大账单闪避，手机也能玩</em>
+    </a>
     <a class="home-tool-card" href="/blog/">
       <span>长文库</span>
       <strong>移民幻觉与加拿大生活</strong>

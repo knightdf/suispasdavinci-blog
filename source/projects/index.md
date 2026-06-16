@@ -17,6 +17,11 @@ type: page
   </div>
 
   <div class="tool-grid">
+    <a class="tool-card primary" href="/games/survived-another-month/">
+      <span>试玩</span>
+      <h3>本月又活下来了</h3>
+      <p>我用 Codex 搓出来的加拿大账单闪避小游戏。适合录屏、截图，也适合被房贷追着跑。</p>
+    </a>
     <a class="tool-card primary" href="/2026/05/12/2026-05-12-virtual-card-chatgpt-claude-guide/">
       <span>置顶</span>
       <h3>虚拟卡不是灰产工具，是企业支付的防火墙</h3>
