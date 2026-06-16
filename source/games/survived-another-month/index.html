@@ -504,15 +504,23 @@
         function resizeCanvas() {
             const prevWidth = canvas.width || 1;
             const prevHeight = canvas.height || 1;
-            canvas.width = Math.max(320, Math.min(window.innerWidth - 24, 1000));
-            canvas.height = Math.max(480, Math.min(window.innerHeight - 24, 700));
+            const mobile = window.innerWidth < 620;
+            const viewportHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+            canvas.width = Math.max(320, Math.min(window.innerWidth - (mobile ? 0 : 24), 1000));
+            canvas.height = mobile
+                ? Math.max(520, Math.min(viewportHeight - 2, 760))
+                : Math.max(480, Math.min(window.innerHeight - 24, 700));
+            playTop = mobile ? 132 : 156;
+            playBottomPad = mobile ? 26 : 44;
             ctx.imageSmoothingEnabled = false;
             if (wallet) {
+                wallet.baseRadius = mobile ? 28 : 35;
+                wallet.radius = wallet.baseRadius;
                 wallet.x = Math.min(canvas.width - wallet.radius, Math.max(wallet.radius, wallet.x * canvas.width / prevWidth));
                 wallet.y = clampToPlayY(wallet.y * canvas.height / prevHeight, wallet.radius);
                 wallet.targetX = wallet.x;
                 wallet.targetY = wallet.y;
-                wallet.maxSpeed = canvas.width < 600 ? 9.2 : 11.5;
+                wallet.maxSpeed = mobile ? 10.8 : 11.5;
             }
         }
         
@@ -545,8 +553,8 @@
         const bossDuration = 420; // 最后7秒
         const bossStartTime = levelDuration - bossDuration;
         const reviveCost = 5000;
-        const playTop = 156;
-        const playBottomPad = 44;
+        let playTop = 156;
+        let playBottomPad = 44;
         let combo = 0;
         let hitFlash = 0;
         let lastHitType = '';
@@ -1005,6 +1013,7 @@
                 const roll = Math.random();
                 const powerTypes = ['shield', 'turbo', 'shrink', 'slow', 'grow', 'relief'];
                 const powerType = isWeird ? powerTypes[Math.floor(Math.random() * powerTypes.length)] : '';
+                const mobileScale = canvas.width < 560 ? 0.72 : 1;
                 const variant = isWeird ? 'powerbox' :
                     !isBill ? (roll > 0.7 ? 'bonus' : 'cash') :
                     roll > 0.92 ? 'wall' :
@@ -1027,8 +1036,8 @@
                     note: e.note || '',
                     variant,
                     powerType,
-                    width: Math.round((isWeird ? 132 : isBill ? (variant === 'needle' ? 72 : variant === 'wall' ? 62 : 112) : 92) * sizeMod),
-                    height: Math.round((isWeird ? 76 : isBill ? (variant === 'wall' ? 150 : 62) : 54) * sizeMod),
+                    width: Math.round((isWeird ? 132 : isBill ? (variant === 'needle' ? 72 : variant === 'wall' ? 62 : 112) : 92) * sizeMod * mobileScale),
+                    height: Math.round((isWeird ? 76 : isBill ? (variant === 'wall' ? 150 : 62) : 54) * sizeMod * mobileScale),
                     pattern: isWeird ? 'orbit' :
                         variant === 'rush' ? 'charge' :
                         variant === 'zigzag' ? 'zigzag' :
@@ -1166,8 +1175,9 @@
                 ? weirdEvents
                 : [{ n: '黄色问号盒', a: 0, t: 'weird', note: '不知道是救命还是手滑' }];
             const lateGameRelief = Math.max(0, currentMonth - 7);
-            const incomeCount = 6 + Math.floor(currentMonth / 3) + lateGameRelief * 2;
-            const billCount = 14 + Math.min(Math.floor(currentMonth * 1.65), 20);
+            const mobile = canvas.width < 560;
+            const incomeCount = 6 + Math.floor(currentMonth / 3) + lateGameRelief * 2 + (mobile ? 2 + Math.floor(currentMonth / 3) : 0);
+            const billCount = 14 + Math.min(Math.floor(currentMonth * 1.65), 20) - (mobile ? 4 : 0);
             const weirdCount = 1 + Math.floor(currentMonth / 6);
             
             itemsToSpawn = shuffle([
@@ -1230,10 +1240,13 @@
 
             items.push(makeLiveItem(item, 0, lane));
 
-            const waveChance = Math.min(0.22, 0.10 + currentMonth * 0.011);
+            const mobile = canvas.width < 560;
+            const waveChance = mobile
+                ? Math.min(0.12, 0.06 + currentMonth * 0.006)
+                : Math.min(0.22, 0.10 + currentMonth * 0.011);
             if (item.type === 'bill' && Math.random() < waveChance) {
                 const patternRoll = Math.random();
-                if (patternRoll < 0.32) {
+                if (patternRoll < (mobile ? 0.48 : 0.32)) {
                     const sideLane = Math.max(0, Math.min(laneCount - 1, lane + (Math.random() < 0.5 ? -1 : 1)));
                     items.push(makeLiveItem({
                         ...item,
@@ -1242,7 +1255,7 @@
                         pattern: Math.random() < 0.5 ? 'sine' : 'straight',
                         width: 104
                     }, 150, sideLane));
-                } else if (patternRoll < 0.52) {
+                } else if (!mobile && patternRoll < 0.52) {
                     const gapLane = Math.floor(Math.random() * laneCount);
                     for (let l = 0; l < laneCount; l++) {
                         if (l === gapLane) continue;
@@ -1256,7 +1269,7 @@
                             height: 128
                         }, 110 + l * 22, l, { speed: 2.35 + currentMonth * 0.09 }));
                     }
-                } else if (patternRoll < 0.72) {
+                } else if (patternRoll < (mobile ? 0.78 : 0.72)) {
                     [-1, 0, 1].forEach((step, index) => {
                         const l = Math.max(0, Math.min(laneCount - 1, lane + step));
                         items.push(makeLiveItem({
@@ -1282,16 +1295,17 @@
             const laneCount = Math.max(4, Math.floor((playableBottom() - playTop) / 105));
             const laneHeight = (playableBottom() - playTop) / laneCount;
             const lane = Math.floor(Math.random() * laneCount);
-            const isRelief = Math.random() < Math.min(0.48, 0.28 + Math.max(0, currentMonth - 7) * 0.05);
+            const mobile = canvas.width < 560;
+            const isRelief = Math.random() < Math.min(mobile ? 0.62 : 0.48, 0.28 + Math.max(0, currentMonth - 7) * 0.05 + (mobile ? 0.14 : 0));
             const item = isRelief ? {
                 name: '临时退税',
-                amount: 70 + currentMonth * 8 + Math.max(0, currentMonth - 7) * 22,
+                amount: 70 + currentMonth * 8 + Math.max(0, currentMonth - 7) * 22 + (mobile ? 35 : 0),
                 type: 'income',
                 variant: 'cash',
-                width: 92,
-                height: 54,
-                hitW: 34,
-                hitH: 34,
+                width: mobile ? 66 : 92,
+                height: mobile ? 40 : 54,
+                hitW: mobile ? 28 : 34,
+                hitH: mobile ? 28 : 34,
                 pattern: 'straight',
                 speed: 3.6 + Math.random() * 0.6,
                 color: '#10b981'
@@ -1300,10 +1314,10 @@
                 amount: -(40 + currentMonth * 7),
                 type: 'bill',
                 variant: Math.random() < 0.35 ? 'needle' : 'ticket',
-                width: 72,
-                height: 48,
-                hitW: 32,
-                hitH: 28,
+                width: mobile ? 54 : 72,
+                height: mobile ? 36 : 48,
+                hitW: mobile ? 26 : 32,
+                hitH: mobile ? 22 : 28,
                 pattern: Math.random() < 0.5 ? 'straight' : 'sine',
                 speed: 3.4 + Math.random() * 0.8 + currentMonth * 0.08,
                 color: '#ef4444'
@@ -1452,6 +1466,8 @@
         }
 
         function hitRadius() {
+            const mobile = canvas.width < 560;
+            if (mobile) return sizeMode === 'small' ? 10 : sizeMode === 'large' ? 22 : 16;
             return sizeMode === 'small' ? 14 : sizeMode === 'large' ? 30 : 20;
         }
 
@@ -1530,9 +1546,9 @@
                 sizeMode = 'normal';
             }
             wallet.radius = sizeMode === 'small' ? 24 : sizeMode === 'large' ? 48 : wallet.baseRadius;
-            const baseSpeed = canvas.width < 600 ? 9.2 : 11.5;
-            wallet.maxSpeed = baseSpeed + (speedTimer > 0 ? 4.8 : 0) - (slowTimer > 0 ? 3.4 : 0);
-            wallet.maxSpeed = Math.max(5.4, wallet.maxSpeed);
+            const baseSpeed = canvas.width < 560 ? 10.8 : 11.5;
+            wallet.maxSpeed = baseSpeed + (speedTimer > 0 ? 4.8 : 0) - (slowTimer > 0 ? 3.0 : 0);
+            wallet.maxSpeed = Math.max(canvas.width < 560 ? 7.2 : 5.4, wallet.maxSpeed);
         }
 
         function canRevive() {
@@ -2230,27 +2246,31 @@
             }
             
             const m = months[currentMonth];
-            pxRect(8, 8, 250, 112, 'rgba(2, 6, 23, 0.86)');
-            pxRect(8, 8, 250, 4, '#334155');
-            pxRect(8, 116, 250, 4, '#334155');
-            pxRect(8, 8, 4, 112, '#334155');
-            pxRect(254, 8, 4, 112, '#334155');
-            pixelText(monthName(currentMonth), 18, 34, 18, '#a5b4fc', 'left');
-            pixelText('$' + money.toLocaleString(), 18, 78, 34, money > 0 ? '#4ade80' : '#ef4444', 'left');
+            const mobileHud = canvas.width < 560;
+            const hudW = mobileHud ? 188 : 250;
+            const hudH = mobileHud ? 98 : 112;
+            pxRect(8, 8, hudW, hudH, 'rgba(2, 6, 23, 0.86)');
+            pxRect(8, 8, hudW, 4, '#334155');
+            pxRect(8, 8 + hudH, hudW, 4, '#334155');
+            pxRect(8, 8, 4, hudH, '#334155');
+            pxRect(8 + hudW - 4, 8, 4, hudH, '#334155');
+            pixelText(monthName(currentMonth), 18, mobileHud ? 30 : 34, mobileHud ? 14 : 18, '#a5b4fc', 'left');
+            pixelText('$' + money.toLocaleString(), 18, mobileHud ? 66 : 78, mobileHud ? 25 : 34, money > 0 ? '#4ade80' : '#ef4444', 'left');
             
             // 余额警告文字
             if (money <= 0 && money > -2000) {
-                pixelText(t('creditMode'), 18, 150, 14, '#ef4444', 'left');
+                pixelText(t('creditMode'), 18, mobileHud ? 124 : 150, mobileHud ? 10 : 14, '#ef4444', 'left');
             }
             
             const timeLeft = Math.ceil((levelDuration - levelTime) / 60);
-            pixelText(`M${currentMonth+1}/12  ${timeLeft}s`, 18, 104, 14, '#94a3b8', 'left');
+            pixelText(`M${currentMonth+1}/12  ${timeLeft}s`, 18, mobileHud ? 92 : 104, mobileHud ? 11 : 14, '#94a3b8', 'left');
             
-            pxRect(18, 126, 180, 12, '#1e293b');
-            pxRect(18, 126, 180 * pressure / 100, 12, pressure > 72 ? '#ef4444' : pressure > 44 ? '#f59e0b' : '#22c55e');
-            pixelText(boss ? `${t('bossFreeze')} ${Math.round(pressure)}%` : `${t('lateHud')} ${Math.round(pressure)}%`, 206, 137, 11, '#cbd5e1', 'left');
+            const pressureW = mobileHud ? 128 : 180;
+            pxRect(18, mobileHud ? 112 : 126, pressureW, 10, '#1e293b');
+            pxRect(18, mobileHud ? 112 : 126, pressureW * pressure / 100, 10, pressure > 72 ? '#ef4444' : pressure > 44 ? '#f59e0b' : '#22c55e');
+            pixelText(boss ? `${t('bossFreeze')} ${Math.round(pressure)}%` : `${t('lateHud')} ${Math.round(pressure)}%`, mobileHud ? 152 : 206, mobileHud ? 121 : 137, mobileHud ? 9 : 11, '#cbd5e1', 'left');
             
-            if (combo >= 3) {
+            if (!mobileHud && combo >= 3) {
                 ctx.fillStyle = '#fbbf24';
                 pixelText(`${currentLang === 'en' ? 'COMBO' : '连击'} x${combo}`, 18, money <= 0 ? 176 : 160, 16, '#fbbf24', 'left');
             }
@@ -2260,10 +2280,10 @@
             if (slowTimer > 0) effects.push(currentLang === 'en' ? 'SLOW' : '减速');
             if (sizeMode === 'small') effects.push(currentLang === 'en' ? 'SMALL' : '变小');
             if (sizeMode === 'large') effects.push(currentLang === 'en' ? 'BIG' : '变大');
-            if (effects.length) {
+            if (!mobileHud && effects.length) {
                 pixelText(effects.join(' / '), 18, money <= 0 ? 198 : 180, 13, '#fbbf24', 'left');
             }
-            if (grazeCount > 0) {
+            if (!mobileHud && grazeCount > 0) {
                 const grazeY = effects.length ? (money <= 0 ? 218 : 200) : (money <= 0 ? 198 : 180);
                 pixelText(`${currentLang === 'en' ? 'GRAZE' : '擦账单'} x${grazeCount}`, 18, grazeY, 13, '#fde68a', 'left');
             }
