@@ -364,6 +364,41 @@
             .month-title { font-size: 1.45rem; margin-bottom: 0.55rem; }
             .result-list { margin: 0.65rem 0; line-height: 1.55; }
         }
+        @media (orientation: landscape) and (max-height: 520px) {
+            .overlay {
+                justify-content: center;
+                padding: 10px 14px;
+            }
+            #startScreen .screen-badge {
+                margin: 0 0 0.35rem;
+                padding: 0.28rem 0.55rem;
+                font-size: 0.68rem;
+            }
+            #startScreen h1 {
+                font-size: 1.55rem;
+                margin-bottom: 0.35rem;
+            }
+            #startScreen .subtitle {
+                margin-bottom: 0.35rem;
+                font-size: 0.82rem;
+            }
+            #gameVersionTag {
+                margin: -0.15rem 0 0.35rem;
+                font-size: 0.68rem;
+            }
+            #startHook {
+                margin: 0 0 0.45rem;
+                padding: 0.32rem 0.55rem;
+                font-size: 0.78rem;
+            }
+            #startInfo,
+            #rulesBox {
+                display: none;
+            }
+            #startBtn {
+                margin-top: 0.1rem;
+            }
+        }
         .toast {
             position: fixed;
             top: 18%;
@@ -428,7 +463,7 @@
     <div id="rotateScreen" class="rotate-screen hidden">
         <div class="rotate-icon">↻</div>
         <strong id="rotateTitle">横屏开玩</strong>
-        <p id="rotateText">这游戏是账单闪避，不是竖屏挤牙膏。把手机横过来，手指才有地方逃命。</p>
+        <p id="rotateText">请把手机横过来。</p>
     </div>
     
     <div id="startScreen" class="overlay">
@@ -727,7 +762,7 @@
                 boostActive: '短暂生效',
                 startHook: '绿色回血，红色扣钱，黄色看命。',
                 rotateTitle: '横屏开玩',
-                rotateText: '这游戏是账单闪避，不是竖屏挤牙膏。把手机横过来，手指才有地方逃命。'
+                rotateText: '请把手机横过来。'
             },
             en: {
                 startTitle: 'Survived Another Month',
@@ -777,7 +812,7 @@
                 boostActive: 'Temporary boost',
                 startHook: 'Green heals. Red hurts. Yellow is fate.',
                 rotateTitle: 'Rotate to play',
-                rotateText: 'This is a bill-dodging game. Turn your phone sideways so your thumb has room to survive.'
+                rotateText: 'Please turn your phone sideways.'
             }
         };
 
