@@ -21,6 +21,13 @@ tags:
 ![](/img/vcard-article-banner.png)
 
 {% raw %}
+<div class="post-disclosure-box">
+  <strong>商业披露与风险提示</strong>
+  <p>本文可能包含合作链接或产品入口。内容仅为工具体验和信息整理，不构成金融、投资、税务、法律或合规建议。涉及 KYC、USDT、跨境支付、虚拟卡和订阅服务时，请遵守所在地法律法规，并自行评估平台条款、费用、风控和资金风险。本站计划不在本文放置展示广告。</p>
+</div>
+{% endraw %}
+
+{% raw %}
 <div class="post-vcard-panel">
   <img src="/img/vcard-banner.png" alt="VCard 虚拟卡入口图" />
   <div>
@@ -329,4 +336,3 @@ Claude一张卡。
 - Crypto.com Help Center: Crypto.com Card Fees & Limits
 - Google Ads Help: Payment methods / billing options
 - Competition Bureau Canada: Influencer marketing and the Competition Act
-

@@ -2044,6 +2044,29 @@ footer a,
   border-radius: 7px;
 }
 
+.post-disclosure-box {
+  margin: 22px 0 26px;
+  padding: 16px 18px;
+  color: #27313a;
+  background: #fff8e6;
+  border: 1px solid rgba(170, 120, 20, 0.28);
+  border-left: 5px solid #d69a13;
+  border-radius: 10px;
+}
+
+.post-disclosure-box strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #172026;
+  font-size: 1.05rem;
+}
+
+.post-disclosure-box p {
+  margin: 0;
+  color: #52606a;
+  line-height: 1.75;
+}
+
 .index-card {
   display: flex;
   align-items: stretch;

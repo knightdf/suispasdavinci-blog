@@ -26,8 +26,9 @@ type: page
 
     <section>
       <h2>Cookie 与广告</h2>
-      <p>本站未来可能接入 Google AdSense 或其他广告服务。广告服务可能使用 Cookie 或类似技术，用于广告展示、频次控制、反作弊和效果统计。</p>
-      <p>你可以在浏览器设置里限制或清除 Cookie。限制 Cookie 后，部分第三方服务的统计或广告个性化可能会受到影响，但不影响阅读本站文章。</p>
+      <p>本站未来可能接入 Google AdSense 或其他第三方广告服务。广告服务可能使用 Cookie、设备标识符或类似技术，用于广告展示、频次控制、反作弊、效果统计和广告个性化。</p>
+      <p>Google 及其合作伙伴可能会根据你的访问情况展示个性化或非个性化广告。你可以通过浏览器设置限制或清除 Cookie，也可以在 Google 的广告设置中管理个性化广告偏好。限制 Cookie 后，部分第三方服务的统计或广告个性化可能会受到影响，但不影响阅读本站文章。</p>
+      <p>本站不会因为展示广告而要求你注册账号、提交付款信息或提供身份证件，也不会出售你的个人信息。</p>
     </section>
 
     <section>
@@ -45,7 +46,7 @@ type: page
       <p>如果你对隐私政策有疑问，或者希望我删除你主动提供过的信息，可以通过 <a href="https://x.com/intent/follow?screen_name=SuisPasDaVinci" target="_blank" rel="noopener noreferrer">X @SuisPasDaVinci</a> 联系我。</p>
     </section>
 
-    <p class="legal-updated">最后更新：2026-05-26</p>
+    <p class="legal-updated">最后更新：2026-06-18</p>
   </div>
 </section>
 {% endraw %}
