@@ -411,15 +411,17 @@
             .lang-switch { gap: 4px; }
             .lang-switch button {
                 width: auto;
-                min-width: 42px;
-                padding: 0.28rem 0.42rem;
-                font-size: 0.72rem;
+                min-width: 38px;
+                min-height: 30px;
+                padding: 0.2rem 0.34rem;
+                font-size: 0.66rem;
             }
             .icon-button {
-                width: 38px;
-                min-width: 38px;
-                height: 38px;
-                min-height: 38px;
+                width: 34px;
+                min-width: 34px;
+                height: 34px;
+                min-height: 34px;
+                font-size: 0.92rem;
             }
             .screen-badge {
                 margin-top: 42px;
@@ -445,14 +447,15 @@
         @media (orientation: portrait) and (max-width: 620px) {
             .lang-switch {
                 top: auto;
-                bottom: max(12px, env(safe-area-inset-bottom));
+                bottom: max(10px, env(safe-area-inset-bottom));
                 left: 12px;
                 z-index: 180;
+                padding: 3px;
             }
             .icon-button {
                 top: auto;
                 right: 12px;
-                bottom: max(12px, env(safe-area-inset-bottom));
+                bottom: max(10px, env(safe-area-inset-bottom));
                 z-index: 181;
                 background: rgba(59, 47, 143, 0.94);
                 border-color: #fef3c7;
@@ -773,12 +776,13 @@
                 canvas.width = Math.max(320, Math.min(window.innerWidth - (phone ? 0 : 24), 1000));
                 canvas.height = Math.max(480, Math.min(window.innerHeight - 24, 700));
             }
-            const displayScale = phone
-                ? Math.min((window.innerWidth - 8) / canvas.width, Math.max(260, vh - (phoneLandscape ? 6 : 88)) / canvas.height)
+            const fitScale = phone
+                ? Math.min((window.innerWidth - 8) / canvas.width, Math.max(220, vh - (phoneLandscape ? 6 : 104)) / canvas.height)
                 : 1;
+            const displayScale = phone && !phoneLandscape ? fitScale * 0.82 : fitScale;
             canvas.style.width = Math.floor(canvas.width * displayScale) + 'px';
             canvas.style.height = Math.floor(canvas.height * displayScale) + 'px';
-            playTop = phone ? (phoneLandscape ? 132 : 158) : 156;
+            playTop = phone ? (phoneLandscape ? 132 : 120) : 156;
             playBottomPad = phone ? 30 : 44;
             ctx.imageSmoothingEnabled = false;
             if (wallet) {
@@ -2552,8 +2556,8 @@
             const m = months[currentMonth];
             const mobileHud = isPhoneMode();
             const portraitHud = mobileHud && !isPhoneLandscape();
-            const hudW = portraitHud ? 620 : mobileHud ? 188 : 250;
-            const hudH = portraitHud ? 124 : mobileHud ? 98 : 112;
+            const hudW = portraitHud ? 500 : mobileHud ? 188 : 250;
+            const hudH = portraitHud ? 86 : mobileHud ? 98 : 112;
             const hudX = portraitHud ? Math.round(canvas.width / 2 - hudW / 2) : 8;
             const hudY = 8;
             pxRect(hudX, hudY, hudW, hudH, 'rgba(2, 6, 23, 0.88)');
@@ -2563,9 +2567,9 @@
             pxRect(hudX + hudW - 4, hudY, 4, hudH, '#334155');
 
             if (portraitHud) {
-                pixelText(monthName(currentMonth), hudX + 20, hudY + 32, 18, '#a5b4fc', 'left');
-                pixelText(`M${currentMonth+1}/12`, hudX + hudW - 20, hudY + 32, 16, '#94a3b8', 'right');
-                pixelText('$' + money.toLocaleString(), canvas.width / 2, hudY + 76, 38, money > 0 ? '#4ade80' : '#ef4444');
+                pixelText(monthName(currentMonth), hudX + 16, hudY + 26, 15, '#a5b4fc', 'left');
+                pixelText(`M${currentMonth+1}/12`, hudX + hudW - 16, hudY + 26, 13, '#94a3b8', 'right');
+                pixelText('$' + money.toLocaleString(), canvas.width / 2, hudY + 54, 28, money > 0 ? '#4ade80' : '#ef4444');
             } else {
                 pixelText(monthName(currentMonth), hudX + 10, mobileHud ? 30 : 34, mobileHud ? 14 : 18, '#a5b4fc', 'left');
                 pixelText('$' + money.toLocaleString(), hudX + 10, mobileHud ? 66 : 78, mobileHud ? 25 : 34, money > 0 ? '#4ade80' : '#ef4444', 'left');
@@ -2573,22 +2577,22 @@
             
             // 余额警告文字
             if (money <= 0 && money > -2000) {
-                pixelText(t('creditMode'), portraitHud ? canvas.width / 2 : 18, portraitHud ? 145 : mobileHud ? 124 : 150, portraitHud ? 13 : mobileHud ? 10 : 14, '#ef4444', portraitHud ? 'center' : 'left');
+                pixelText(t('creditMode'), portraitHud ? canvas.width / 2 : 18, portraitHud ? 105 : mobileHud ? 124 : 150, portraitHud ? 10 : mobileHud ? 10 : 14, '#ef4444', portraitHud ? 'center' : 'left');
             }
             
             const timeLeft = Math.ceil((levelDuration - levelTime) / 60);
             if (portraitHud) {
-                pixelText(`${timeLeft}s`, canvas.width / 2, hudY + 32, 17, '#fef3c7');
+                pixelText(`${timeLeft}s`, canvas.width / 2, hudY + 26, 14, '#fef3c7');
             } else {
                 pixelText(`M${currentMonth+1}/12  ${timeLeft}s`, 18, mobileHud ? 92 : 104, mobileHud ? 11 : 14, '#94a3b8', 'left');
             }
             
             const pressureW = portraitHud ? hudW - 34 : mobileHud ? 128 : 180;
             const pressureX = portraitHud ? hudX + 17 : 18;
-            const pressureY = portraitHud ? hudY + 102 : mobileHud ? 112 : 126;
+            const pressureY = portraitHud ? hudY + 68 : mobileHud ? 112 : 126;
             pxRect(pressureX, pressureY, pressureW, 10, '#1e293b');
             pxRect(pressureX, pressureY, pressureW * pressure / 100, 10, pressure > 72 ? '#ef4444' : pressure > 44 ? '#f59e0b' : '#22c55e');
-            pixelText(boss ? `${t('bossFreeze')} ${Math.round(pressure)}%` : `${t('lateHud')} ${Math.round(pressure)}%`, portraitHud ? canvas.width / 2 : mobileHud ? 152 : 206, portraitHud ? pressureY + 24 : mobileHud ? 121 : 137, portraitHud ? 12 : mobileHud ? 9 : 11, '#cbd5e1', portraitHud ? 'center' : 'left');
+            pixelText(boss ? `${t('bossFreeze')} ${Math.round(pressure)}%` : `${t('lateHud')} ${Math.round(pressure)}%`, portraitHud ? canvas.width / 2 : mobileHud ? 152 : 206, portraitHud ? pressureY + 20 : mobileHud ? 121 : 137, portraitHud ? 9 : mobileHud ? 9 : 11, '#cbd5e1', portraitHud ? 'center' : 'left');
             
             if (!mobileHud && combo >= 3) {
                 ctx.fillStyle = '#fbbf24';
