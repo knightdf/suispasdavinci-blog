@@ -443,6 +443,24 @@
             }
         }
         @media (orientation: portrait) and (max-width: 620px) {
+            .lang-switch {
+                top: auto;
+                bottom: max(12px, env(safe-area-inset-bottom));
+                left: 12px;
+                z-index: 180;
+            }
+            .icon-button {
+                top: auto;
+                right: 12px;
+                bottom: max(12px, env(safe-area-inset-bottom));
+                z-index: 181;
+                background: rgba(59, 47, 143, 0.94);
+                border-color: #fef3c7;
+                color: #fef3c7;
+            }
+            .rotate-screen {
+                bottom: max(64px, calc(env(safe-area-inset-bottom) + 64px));
+            }
             #startScreen {
                 justify-content: center;
                 overflow: hidden;
@@ -760,7 +778,7 @@
                 : 1;
             canvas.style.width = Math.floor(canvas.width * displayScale) + 'px';
             canvas.style.height = Math.floor(canvas.height * displayScale) + 'px';
-            playTop = phone ? 132 : 156;
+            playTop = phone ? (phoneLandscape ? 132 : 158) : 156;
             playBottomPad = phone ? 30 : 44;
             ctx.imageSmoothingEnabled = false;
             if (wallet) {
@@ -778,7 +796,9 @@
         function updateOrientationGate() {
             const rotateScreen = document.getElementById('rotateScreen');
             if (!rotateScreen) return;
-            const needsLandscape = isPhoneMode() && !isPhoneLandscape();
+            let activeState = 'start';
+            try { activeState = gameState; } catch {}
+            const needsLandscape = isPhoneMode() && !isPhoneLandscape() && activeState !== 'playing' && activeState !== 'paused';
             rotateScreen.classList.toggle('hidden', !needsLandscape);
         }
         
@@ -2531,28 +2551,44 @@
             
             const m = months[currentMonth];
             const mobileHud = isPhoneMode();
-            const hudW = mobileHud ? 188 : 250;
-            const hudH = mobileHud ? 98 : 112;
-            pxRect(8, 8, hudW, hudH, 'rgba(2, 6, 23, 0.86)');
-            pxRect(8, 8, hudW, 4, '#334155');
-            pxRect(8, 8 + hudH, hudW, 4, '#334155');
-            pxRect(8, 8, 4, hudH, '#334155');
-            pxRect(8 + hudW - 4, 8, 4, hudH, '#334155');
-            pixelText(monthName(currentMonth), 18, mobileHud ? 30 : 34, mobileHud ? 14 : 18, '#a5b4fc', 'left');
-            pixelText('$' + money.toLocaleString(), 18, mobileHud ? 66 : 78, mobileHud ? 25 : 34, money > 0 ? '#4ade80' : '#ef4444', 'left');
+            const portraitHud = mobileHud && !isPhoneLandscape();
+            const hudW = portraitHud ? 620 : mobileHud ? 188 : 250;
+            const hudH = portraitHud ? 124 : mobileHud ? 98 : 112;
+            const hudX = portraitHud ? Math.round(canvas.width / 2 - hudW / 2) : 8;
+            const hudY = 8;
+            pxRect(hudX, hudY, hudW, hudH, 'rgba(2, 6, 23, 0.88)');
+            pxRect(hudX, hudY, hudW, 4, '#334155');
+            pxRect(hudX, hudY + hudH, hudW, 4, '#334155');
+            pxRect(hudX, hudY, 4, hudH, '#334155');
+            pxRect(hudX + hudW - 4, hudY, 4, hudH, '#334155');
+
+            if (portraitHud) {
+                pixelText(monthName(currentMonth), hudX + 20, hudY + 32, 18, '#a5b4fc', 'left');
+                pixelText(`M${currentMonth+1}/12`, hudX + hudW - 20, hudY + 32, 16, '#94a3b8', 'right');
+                pixelText('$' + money.toLocaleString(), canvas.width / 2, hudY + 76, 38, money > 0 ? '#4ade80' : '#ef4444');
+            } else {
+                pixelText(monthName(currentMonth), hudX + 10, mobileHud ? 30 : 34, mobileHud ? 14 : 18, '#a5b4fc', 'left');
+                pixelText('$' + money.toLocaleString(), hudX + 10, mobileHud ? 66 : 78, mobileHud ? 25 : 34, money > 0 ? '#4ade80' : '#ef4444', 'left');
+            }
             
             // 余额警告文字
             if (money <= 0 && money > -2000) {
-                pixelText(t('creditMode'), 18, mobileHud ? 124 : 150, mobileHud ? 10 : 14, '#ef4444', 'left');
+                pixelText(t('creditMode'), portraitHud ? canvas.width / 2 : 18, portraitHud ? 145 : mobileHud ? 124 : 150, portraitHud ? 13 : mobileHud ? 10 : 14, '#ef4444', portraitHud ? 'center' : 'left');
             }
             
             const timeLeft = Math.ceil((levelDuration - levelTime) / 60);
-            pixelText(`M${currentMonth+1}/12  ${timeLeft}s`, 18, mobileHud ? 92 : 104, mobileHud ? 11 : 14, '#94a3b8', 'left');
+            if (portraitHud) {
+                pixelText(`${timeLeft}s`, canvas.width / 2, hudY + 32, 17, '#fef3c7');
+            } else {
+                pixelText(`M${currentMonth+1}/12  ${timeLeft}s`, 18, mobileHud ? 92 : 104, mobileHud ? 11 : 14, '#94a3b8', 'left');
+            }
             
-            const pressureW = mobileHud ? 128 : 180;
-            pxRect(18, mobileHud ? 112 : 126, pressureW, 10, '#1e293b');
-            pxRect(18, mobileHud ? 112 : 126, pressureW * pressure / 100, 10, pressure > 72 ? '#ef4444' : pressure > 44 ? '#f59e0b' : '#22c55e');
-            pixelText(boss ? `${t('bossFreeze')} ${Math.round(pressure)}%` : `${t('lateHud')} ${Math.round(pressure)}%`, mobileHud ? 152 : 206, mobileHud ? 121 : 137, mobileHud ? 9 : 11, '#cbd5e1', 'left');
+            const pressureW = portraitHud ? hudW - 34 : mobileHud ? 128 : 180;
+            const pressureX = portraitHud ? hudX + 17 : 18;
+            const pressureY = portraitHud ? hudY + 102 : mobileHud ? 112 : 126;
+            pxRect(pressureX, pressureY, pressureW, 10, '#1e293b');
+            pxRect(pressureX, pressureY, pressureW * pressure / 100, 10, pressure > 72 ? '#ef4444' : pressure > 44 ? '#f59e0b' : '#22c55e');
+            pixelText(boss ? `${t('bossFreeze')} ${Math.round(pressure)}%` : `${t('lateHud')} ${Math.round(pressure)}%`, portraitHud ? canvas.width / 2 : mobileHud ? 152 : 206, portraitHud ? pressureY + 24 : mobileHud ? 121 : 137, portraitHud ? 12 : mobileHud ? 9 : 11, '#cbd5e1', portraitHud ? 'center' : 'left');
             
             if (!mobileHud && combo >= 3) {
                 ctx.fillStyle = '#fbbf24';
@@ -2622,6 +2658,7 @@
             gameState = 'paused';
             wallet.dragging = false;
             setPauseButtonVisible(false);
+            updateOrientationGate();
             document.getElementById('pauseScreen').classList.remove('hidden');
         }
 
@@ -2630,6 +2667,7 @@
             gameState = 'playing';
             document.getElementById('pauseScreen').classList.add('hidden');
             setPauseButtonVisible(true);
+            updateOrientationGate();
         }
 
         function restartFromPause() {
@@ -2703,10 +2741,12 @@
             document.getElementById('reviveScreen').classList.add('hidden');
             document.getElementById('pauseScreen').classList.add('hidden');
             setPauseButtonVisible(false);
+            updateOrientationGate();
             showLevelScreen();
         }
         
         function showLevelScreen() {
+            gameState = 'level';
             const m = months[currentMonth];
             document.getElementById('monthTitle').textContent = monthName(currentMonth);
             document.getElementById('monthDesc').textContent = currentLang === 'en' ? monthDescsEn[currentMonth] : m.desc;
@@ -2719,6 +2759,7 @@
             document.getElementById('nextLevelBtn').textContent = t('enterMonth');
             
             document.getElementById('levelScreen').classList.remove('hidden');
+            updateOrientationGate();
         }
         
         function startLevel() {
@@ -2746,12 +2787,14 @@
             document.getElementById('reviveScreen').classList.add('hidden');
             document.getElementById('pauseScreen').classList.add('hidden');
             setPauseButtonVisible(true);
+            updateOrientationGate();
         }
         
         function finishMonth() {
             gameState = 'monthEnd';
             playSfx('month');
             setPauseButtonVisible(false);
+            updateOrientationGate();
             
             const activeExpenses = monthExpenses.filter(e => e.kind !== 'fixed' && e.kind !== 'salary');
             const worstOne = (activeExpenses.length ? activeExpenses : monthExpenses)
