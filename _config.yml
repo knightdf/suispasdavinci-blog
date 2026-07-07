@@ -61,6 +61,11 @@ sitemap:
   path: sitemap.xml
   tags: false
   categories: false
+search:
+  path: local-search.xml
+  field: all
+  content: true
+  format: html
 include:
   - _redirects
 exclude: null
