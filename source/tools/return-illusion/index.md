@@ -72,7 +72,7 @@ banner_img_height: 0
         <div class="run-report-footer">
           <div>
             <strong>回国幻觉浓度测试</strong>
-            <span>达芬七｜Seven @SuisPasDaVinci</span>
+            <span>达芬七｜Seven @davinci_seven</span>
             <span>Stanley Team · v0.1 · 2026-05-23</span>
           </div>
           <div class="run-qr-card">
@@ -437,7 +437,7 @@ banner_img_height: 0
     ctx.fillStyle = '#7b756b';
     ctx.font = '800 26px Arial, sans-serif';
     ctx.fillText('回国幻觉浓度测试', 110, 1320);
-    ctx.fillText('达芬七｜Seven @SuisPasDaVinci', 110, 1360);
+    ctx.fillText('达芬七｜Seven @davinci_seven', 110, 1360);
     ctx.fillText('v0.1 · 2026-05-23', 110, 1400);
     drawImageContain(ctx, followQr, 500, 1278, 118, 118);
     ctx.save();

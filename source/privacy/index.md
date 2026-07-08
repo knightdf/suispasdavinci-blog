@@ -44,7 +44,7 @@ type: page
 
     <section>
       <h2>联系</h2>
-      <p>如果你对隐私政策有疑问，或者希望我删除你主动提供过的信息，可以通过 <a href="https://x.com/intent/follow?screen_name=SuisPasDaVinci" target="_blank" rel="noopener noreferrer">X @SuisPasDaVinci</a> 联系我。</p>
+      <p>如果你对隐私政策有疑问，或者希望我删除你主动提供过的信息，可以通过<a href="https://x.com/intent/follow?screen_name=davinci_seven" target="_blank" rel="noopener noreferrer">X@davinci_seven</a>联系我。</p>
     </section>
 
     <p class="legal-updated">最后更新：2026-06-19</p>

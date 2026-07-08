@@ -72,7 +72,7 @@ banner_img_height: 0
         <div class="run-report-footer">
           <div>
             <strong>这逼移民移得值不值计算器</strong>
-            <span>达芬七｜Seven @SuisPasDaVinci</span>
+            <span>达芬七｜Seven @davinci_seven</span>
             <span>Stanley Team · v0.3 · 2026-05-22</span>
           </div>
           <div class="run-qr-card">
@@ -460,7 +460,7 @@ banner_img_height: 0
     ctx.fillStyle = '#7b756b';
     ctx.font = '800 28px Arial, sans-serif';
     ctx.fillText('这逼移民移得值不值计算器', 110, 1318);
-    ctx.fillText('达芬七｜Seven @SuisPasDaVinci', 110, 1360);
+    ctx.fillText('达芬七｜Seven @davinci_seven', 110, 1360);
     ctx.fillText('v0.3 · 2026-05-22', 110, 1402);
 
     drawImageContain(ctx, followQr, 780, 1228, 118, 118);

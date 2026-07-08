@@ -13,9 +13,9 @@ type: page
   </div>
 
   <div class="contact-grid">
-    <a href="https://x.com/intent/follow?screen_name=SuisPasDaVinci" target="_blank" rel="noopener noreferrer">
-      <span>个人 X</span>
-      <strong>@SuisPasDaVinci</strong>
+    <a href="https://x.com/intent/follow?screen_name=davinci_seven" target="_blank" rel="noopener noreferrer">
+      <span>个人X</span>
+      <strong>@davinci_seven</strong>
       <p>最推荐的联系入口。新文章、小工具和临时想法都会先发在这里。</p>
     </a>
 

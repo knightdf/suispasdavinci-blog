@@ -12,7 +12,7 @@ type: page
       <h1>加拿大十年，把海外生活、润学和 AI 工具拆成能用的判断。</h1>
       <p>这里不是移民中介页面，也不是资源搬运站。我写真实海外生活、出海工具、语言学习和人生重启相关的文章，也把一些复杂问题做成小工具。</p>
       <div class="about-actions">
-        <a class="btn primary" href="https://x.com/intent/follow?screen_name=SuisPasDaVinci" target="_blank" rel="noopener noreferrer">关注达芬七｜Seven</a>
+        <a class="btn primary" href="https://x.com/intent/follow?screen_name=davinci_seven" target="_blank" rel="noopener noreferrer">关注达芬七｜Seven</a>
         <a class="btn" href="https://x.com/Stanleysobest" target="_blank" rel="noopener noreferrer">查看 Stanley Team</a>
       </div>
     </div>
@@ -20,14 +20,14 @@ type: page
     <aside class="profile-card">
       <img src="/img/x-avatar.jpg" alt="达芬七｜Seven头像" />
       <h2>达芬七｜Seven</h2>
-      <p>@SuisPasDaVinci</p>
+      <p>@davinci_seven</p>
       <strong>加拿大十年。Stanley Team 成员。</strong>
       <span>写移民幻觉、海外生活、出海工具和普通人的重启决策。</span>
     </aside>
   </div>
 
   <div class="x-card-grid">
-    <a class="x-profile-card" href="https://x.com/SuisPasDaVinci" target="_blank" rel="noopener noreferrer">
+    <a class="x-profile-card" href="https://x.com/davinci_seven" target="_blank" rel="noopener noreferrer">
       <div>
         <img src="/img/x-avatar.jpg" alt="达芬七｜Seven X 头像" />
         <span>个人主页</span>
